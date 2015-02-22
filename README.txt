@@ -1,34 +1,43 @@
+Skelattars, a responsive HTML5/CSS3 Template
+================================================================================
+
+[Skelattars][1] is a clean and minimalistic HTML/CSS/JS template that is build
+upon the [Strata Template by html5up][2] and its underlying [framework Skel][3].
+It is free for personal and commercial use under the [CC-BY 3.0 license][4].
+
+[1]: http://48augen.de/projects/skelattars.html
+[2]: http://html5up.net/strata
+[3]: http://getskel.com/
+[4]: http://creativecommons.org/licenses/by-sa/3.0/
+
+It is developed using using tools like [Bower][], [Gulp][] and [SCSS][].
+
+[Bower]: http://bower.io/
+[Gulp]: http://gulpjs.com/
+[SCSS]: http://sass-lang.com/
+
+
 Strata by HTML5 UP
-html5up.net | @n33co
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+--------------------------------------------------------------------------------
 
+Free for personal and commercial use under the CCA 3.0 license.
 
-A simple, minimalist template that actually began life as an unused redesign of n33.co
-(my personal site). Includes a (configurable) parallax background effect, Poptrox-powered
-lightbox gallery, a bunch of pre-styled elements, and Sass sources for the Sass-inclined.
-
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
-
-(* = Not included)
-
-Feedback, bug reports, and comments are not only welcome, but strongly encouraged :)
-
-AJ
-n33.co @n33co dribbble.com/n33
-
+A simple, minimalist template that actually began life as an unused redesign of
+n33.co. Includes a (configurable) parallax background effect, Poptrox-powered
+lightbox gallery, a bunch of pre-styled elements, and Sass sources for the
+Sass-inclined. By AJ (n33.co @n33co dribbble.com/n33).
 
 Credits:
 
-	Demo Images:
-		Unsplash (unsplash.com)
+* Demo Images:
+  * Unsplash (unsplash.com)
 
-	Icons:
-		Font Awesome (fortawesome.github.com/Font-Awesome)
+* Icons:
+  * Font Awesome (fortawesome.github.com/Font-Awesome)
 
-	Other:
-		jQuery (jquery.com)
-		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-		CSS3 Pie (css3pie.com)
-		background-size polyfill (github.com/louisremi)
-		skel (getskel.com)
+* Other:
+  * jQuery (jquery.com)
+  * html5shiv.js (@afarkas @jdalton @jon_neal @rem)
+  * CSS3 Pie (css3pie.com)
+  * background-size polyfill (github.com/louisremi)
+  * skel (getskel.com)

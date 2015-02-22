@@ -1,0 +1,10 @@
+{
+  "name": "Skelattars",
+  "version": "0.5",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.11.2",
+    "skel": "n33/skel#2.2.1",
+    "poptrox": "n33/jquery.poptrox#2.5.0"
+  }
+}

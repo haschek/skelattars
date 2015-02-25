@@ -27,12 +27,13 @@ pre code{display:block;line-height:1.75em;padding:1em 1.5em;overflow-x:auto}
 .align-left{text-align:left}
 .align-center{text-align:center}
 .align-right{text-align:right}
+.row{list-style:none;padding:0}
 article.special,section.special{text-align:center}
 header p{color:#b2b2b2;position:relative;margin:0 0 1.5em}
-header h2+p{font-size:1.25em;margin-top:-1em;line-height:1.5em}
+header h1+p,header h2+p{font-size:1.25em;margin-top:-1em;line-height:1.5em}
 header h3+p{font-size:1.1em;margin-top:-.8em;line-height:1.5em}
 header h4+p,header h5+p,header h6+p{font-size:.9em;margin-top:-.6em;line-height:1.5em}
-header.major h2{font-size:2em}
+header.major h1,header.major h2{font-size:2em}
 form{margin:0 0 2em}
 label{color:#787878;display:block;font-size:.9em;font-weight:400;margin:0 0 1em}
 input[type=text],input[type=password],input[type=email],select,textarea{-moz-appearance:none;-webkit-appearance:none;-o-appearance:none;-ms-appearance:none;appearance:none;background:#f7f7f7;border-radius:.35em;border:2px solid transparent;color:inherit;display:block;outline:0;padding:0 .75em;text-decoration:none;width:100%}
@@ -138,10 +139,10 @@ table.alt tfoot{border-top:0}
 .work-item .image{margin:0 0 1.5em}
 .work-item h3{font-size:1em;margin:0 0 .5em}
 .work-item p{font-size:.8em;line-height:1.5em;margin:0}
-#header{background:url(../images/bg.jpg) top left/auto 100% no-repeat fixed #1f1815;color:rgba(255,255,255,.5);height:100%;left:0;padding:8em 4em 0 0;position:fixed;text-align:right;top:0;width:35%}
+#header{background:url(../images/bg.jpg) top left/auto 100% no-repeat fixed #1f1815;color:rgba(255,255,255,.5);height:100%;left:0;padding:8em 4em 0;position:fixed;text-align:right;top:0;width:35%}
 #header b,#header h2,#header h3,#header h4,#header h5,#header h6,#header strong{color:#fff}
-#header h1{color:rgba(255,255,255,.5);font-size:1.35em;line-height:1.75em;margin:0}
-#header .image.avatar{margin:0 0 1em;width:6.25em}
+#header>*{color:rgba(255,255,255,.5);font-size:1.35em;line-height:1.75em;margin:0}
+#header .image.avatar{margin:0 0 1em;font-size:1em;width:6.25em}
 #footer{bottom:0;left:0;padding:0 4em 6em 0;position:fixed;text-align:right;width:35%}
 #footer .icons{margin:1em 0 0}
 #footer .icons a{color:rgba(255,255,255,.4)}

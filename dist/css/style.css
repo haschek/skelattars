@@ -136,6 +136,10 @@ pre {
 .align-right {
   text-align: right; }
 
+.row {
+  list-style: none;
+  padding: 0; }
+
 /* Section/Article */
 section.special, article.special {
   text-align: center; }
@@ -144,7 +148,7 @@ header p {
   color: #b2b2b2;
   position: relative;
   margin: 0 0 1.5em 0; }
-header h2 + p {
+header h1 + p, header h2 + p {
   font-size: 1.25em;
   margin-top: -1em;
   line-height: 1.5em; }
@@ -156,7 +160,7 @@ header h4 + p, header h5 + p, header h6 + p {
   font-size: 0.9em;
   margin-top: -0.6em;
   line-height: 1.5em; }
-header.major h2 {
+header.major h1, header.major h2 {
   font-size: 2em; }
 
 /* Form */
@@ -631,7 +635,7 @@ input[type="submit"], input[type="reset"], input[type="button"], .button {
   color: rgba(255, 255, 255, 0.5);
   height: 100%;
   left: 0;
-  padding: 8em 4em 0 0;
+  padding: 8em 4em 0 4em;
   position: fixed;
   text-align: right;
   top: 0;
@@ -640,13 +644,14 @@ input[type="submit"], input[type="reset"], input[type="button"], .button {
     color: #ffffff; }
   #header h2, #header h3, #header h4, #header h5, #header h6 {
     color: #ffffff; }
-  #header h1 {
+  #header > * {
     color: rgba(255, 255, 255, 0.5);
     font-size: 1.35em;
     line-height: 1.75em;
     margin: 0; }
   #header .image.avatar {
     margin: 0 0 1em 0;
+    font-size: 1em;
     width: 6.25em; }
 
 /* Footer */

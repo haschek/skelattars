@@ -3,16 +3,19 @@ var gulp = require('./src/gulp')([
     'renderhtml',
     'tidyhtml',
     'sass',
-    'minifycss'
+    'minifycss',
+    'javascript',
+    'minifyjs'
 //    'watch',
 //    'bootstrap',
 //    'browserify',
 //    'vendor'
 ]);
 
-gulp.task('init', ['bower']);//, 'vendor']);
-// gulp.task('mockup', ['html', 'css', 'js',]);
+// gulp.task('init', ['bower']);//, 'vendor']);
+gulp.task('mockup', ['html', 'css', 'js',]);
 gulp.task('html', ['renderhtml', 'tidyhtml']);
 gulp.task('css', ['sass', 'minifycss']);
+gulp.task('js', ['javascript', 'minifyjs']);
 // gulp.task('minify', ['minifycss', 'browserify']);
 // gulp.task('default', ['mockup', 'watch']);

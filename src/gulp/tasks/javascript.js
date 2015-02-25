@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var jshint = require('gulp-jshint');
 var config = require('../config.js');
 
 // init options
@@ -15,9 +15,14 @@ if(config.debug) {
 
 module.exports = function(){
     return gulp.src([
-            './src/scss/**/*.scss',
+            './src/js/**/*.js',
         ])
-        .pipe(sass(options))
-        // TODO: add autoprefixer
-        .pipe(gulp.dest('./dist/css'));
+        // TODO: add requirejs, apm, ...
+        .pipe(
+            jshint('.jshintrc')
+        )
+        .pipe(
+            jshint.reporter('default')
+        )
+        .pipe(gulp.dest('./dist/js'));
 };

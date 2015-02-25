@@ -16,8 +16,24 @@ It is developed using using tools like [Bower][], [Gulp][] and [SCSS][].
 [Gulp]: http://gulpjs.com/
 [SCSS]: http://sass-lang.com/
 
+Usage
+--------------------------------------------------------------------------------
 
-Strata by HTML5 UP
+Prerequisites: nodejs, npm, bower
+
+    $ git clone https://github.com/haschek/skelattars.git
+    $ cd skelattars/
+    $ npm install
+
+Changelog (and differences to Strata by HTML5 Up)
+--------------------------------------------------------------------------------
+
+* Skelattars v0.0.0
+    * name: skel (like the framework) + attars (anagram of strata)
+    * folder structure
+    * integrating node modules, bower components and gulp worklow
+
+Forked from: Strata by HTML5 UP
 --------------------------------------------------------------------------------
 
 Free for personal and commercial use under the CCA 3.0 license.

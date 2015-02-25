@@ -691,12 +691,9 @@ input[type="submit"], input[type="reset"], input[type="button"], .button {
   max-width: 54em;
   padding: 8em 4em 4em 4em;
   width: calc(100% - 35%); }
-  #main > section {
-    border-top: solid 2px #efefef;
-    margin: 4em 0 0 0;
-    padding: 4em 0 0 0; }
-    #main > section:first-child {
-      border-top: 0;
+  #main > header, #main > section, #main > footer {
+    margin: 4em 0; }
+    #main > header:first-child, #main > section:first-child, #main > footer:first-child {
       margin-top: 0;
       padding-top: 0; }
 

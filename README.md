@@ -34,6 +34,7 @@ Changelog (and differences to Strata by HTML5 Up)
     * integrating node modules, bower components and gulp worklow
 * Skelattars v0.5.0-dev
     * demo content
+    * do not force optical borders as horizontal rules after sections
 
 Forked from: Strata by HTML5 UP
 --------------------------------------------------------------------------------

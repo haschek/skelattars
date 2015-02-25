@@ -5,8 +5,8 @@ var gulp = require('./src/gulp')([
     'sass',
     'minifycss',
     'javascript',
-    'minifyjs'
-//    'watch',
+    'minifyjs',
+    'watch',
 //    'bootstrap',
 //    'browserify',
 //    'vendor'
@@ -18,4 +18,4 @@ gulp.task('html', ['renderhtml', 'tidyhtml']);
 gulp.task('css', ['sass', 'minifycss']);
 gulp.task('js', ['javascript', 'minifyjs']);
 // gulp.task('minify', ['minifycss', 'browserify']);
-// gulp.task('default', ['mockup', 'watch']);
+gulp.task('default', ['mockup', 'watch']);

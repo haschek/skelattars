@@ -4,7 +4,7 @@ var minifyJS = require('gulp-uglify');
 var config = require('../config');
 
 module.exports = {
-    deps: ['sass'],
+    deps: ['javascript'],
     work: function() {
         return gulp.src([
                 './dist/js/**/!(*.min.*).js' // @see https://github.com/isaacs/node-glob#glob-primer

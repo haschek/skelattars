@@ -12,8 +12,8 @@ var gulp = require('./src/gulp')([
 //    'vendor'
 ]);
 
-// gulp.task('init', ['bower']);//, 'vendor']);
-gulp.task('mockup', ['html', 'css', 'js',]);
+gulp.task('init', ['bower', 'mockup']); //, 'vendor']);
+gulp.task('mockup', ['html', 'css', 'js']);
 gulp.task('html', ['renderhtml', 'tidyhtml']);
 gulp.task('css', ['sass', 'minifycss']);
 gulp.task('js', ['javascript', 'minifyjs']);

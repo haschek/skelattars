@@ -32,6 +32,8 @@ Changelog (and differences to Strata by HTML5 Up)
     * name: skel (like the framework) + attars (anagram of strata)
     * folder structure
     * integrating node modules, bower components and gulp worklow
+* Skelattars v0.5.0-dev
+    * demo content
 
 Forked from: Strata by HTML5 UP
 --------------------------------------------------------------------------------

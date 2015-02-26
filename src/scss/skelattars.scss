@@ -1,0 +1,24 @@
+@import 'skel';
+@import 'style';
+
+@media screen and (max-width: 1800px) {
+    @import 'style-xlarge';
+}
+
+@media screen and (max-width: 1280px) {
+    @import 'style-large';
+}
+
+@media screen and (max-width: 980px) {
+    @import 'style-medium';
+}
+
+@media screen and (max-width: 736px) {
+    @import 'style-small';
+}
+
+@media screen and (max-width: 480px) {
+    @import 'style-xsmall';
+}
+
+

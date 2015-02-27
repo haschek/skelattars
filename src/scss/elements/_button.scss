@@ -92,12 +92,13 @@
 			cursor: default;
 			list-style: none;
 			padding-left: 0;
+			margin-top: $size-element-margin * 0.5;
 			
 		    li,
 		    &.vertical li {
 			    display: block;
 			    padding: 0;
-			    margin: 0 0 ($size-element-margin * 0.5) 0;
+			    margin: 0 ($size-element-margin * 0.5) ($size-element-margin * 0.5) 0;
 			    text-align: center;
 			    // width: 100%;
 			
@@ -111,6 +112,10 @@
 					    }
 				    }
 			    }
+		    }
+		    
+		    &.vertical li {
+		        margin-right: 0;
 		    }
 
 			&.small {
@@ -154,11 +159,10 @@
 
 	    ul, ol {
 		    &.actions {
-			    margin: 0 0 $size-element-margin 0;
 			
 			    li {
 				    display: inline-block;
-				    margin: 0 ($size-element-margin * 0.5) 0 0;
+				    //margin: 0 ($size-element-margin * 0.5) 0 0;
 				    vertical-align: middle;
 				    text-align: inherit;
 			

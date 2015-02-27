@@ -554,6 +554,10 @@ pre {
   list-style: none;
   padding: 0; }
 
+.subline {
+  font-size: 0.8em;
+  color: #666; }
+
 /* Section/Article */
 section.special, article.special {
   text-align: center; }
@@ -1184,17 +1188,20 @@ input[type="submit"], input[type="reset"], input[type="button"], .button {
 ul.actions, ol.actions {
   cursor: default;
   list-style: none;
-  padding-left: 0; }
+  padding-left: 0;
+  margin-top: 0.80769em; }
   ul.actions li, ul.actions.vertical li, ol.actions li, ol.actions.vertical li {
     display: block;
     padding: 0;
-    margin: 0 0 0.80769em 0;
+    margin: 0 0.80769em 0.80769em 0;
     text-align: center; }
     ul.actions li > *, ul.actions.vertical li > *, ol.actions li > *, ol.actions.vertical li > * {
       margin: 0;
       width: 100%; }
       ul.actions li > *.icon:before, ul.actions.vertical li > *.icon:before, ol.actions li > *.icon:before, ol.actions.vertical li > *.icon:before {
         margin-left: -2em; }
+  ul.actions.vertical li, ol.actions.vertical li {
+    margin-right: 0; }
   ul.actions.small li, ol.actions.small li {
     margin: 0 0.40385em 0 0; }
   ul.actions.small.vertical li, ol.actions.small.vertical li {
@@ -1212,19 +1219,16 @@ ul.actions, ol.actions {
 
 @media screen and (min-width: 480px) {
   /* List */
-  ul.actions, ol.actions {
-    margin: 0 0 1.61538em 0; }
-    ul.actions li, ol.actions li {
-      display: inline-block;
-      margin: 0 0.80769em 0 0;
-      vertical-align: middle;
-      text-align: inherit; }
-      ul.actions li:last-child, ol.actions li:last-child {
-        margin-right: 0; }
-      ul.actions li > *, ol.actions li > * {
-        width: auto; }
-    ul.actions.vertical li > *, ol.actions.vertical li > * {
-      width: 100%; } }
+  ul.actions li, ol.actions li {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: inherit; }
+    ul.actions li:last-child, ol.actions li:last-child {
+      margin-right: 0; }
+    ul.actions li > *, ol.actions li > * {
+      width: auto; }
+  ul.actions.vertical li > *, ol.actions.vertical li > * {
+    width: 100%; } }
 
 /* Poptrox */
 /*

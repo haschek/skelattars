@@ -7,8 +7,8 @@
 	    color: $color-accent2-fg;
 	    background-attachment:	scroll;
 	    background-color:		$color-accent2-bg;
-	    background-image:		url('images/overlay.png'),		url('../images/bg.jpg');
-	    background-position:	top left,						center center;
+	    background-image:		url('images/overlay.png'),		url($header-bg);
+	    background-position:	top left,						center;
 	    background-repeat:		repeat,							no-repeat;
 	    background-size:		auto,							cover;
 	
@@ -44,7 +44,7 @@
 	    color: $color-accent2-fg;
 	    background-attachment:	scroll;
 	    background-color:		$color-accent2-bg;
-	    background-image:		url('images/overlay.png'),		url('../images/bg.jpg');
+	    background-image:		url('images/overlay.png'),		url($header-bg);
 	    background-position:	top left,						bottom center;
 	    background-repeat:		repeat,							no-repeat;
 	    background-size:		auto,							cover;
@@ -135,7 +135,7 @@
 		    text-align: right;
 		    top: 0;
 		    width: (100% - 100% / $calcratio) / $calcratio;
-		    background-attachment: scroll, fixed;
+		    background-attachment: scroll;
 
 	        br {
 		        display: inherit;

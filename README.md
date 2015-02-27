@@ -40,6 +40,7 @@ Changelog (and differences to Strata by HTML5 Up)
     * separate layout elements
     * mobile first approach
     * adjust Typography and font-size configuration
+    * adjust colors and images
 
 Forked from: Strata by HTML5 UP
 --------------------------------------------------------------------------------

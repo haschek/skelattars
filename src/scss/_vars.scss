@@ -3,10 +3,10 @@
     $calcratio:                 21/13; // appr. golden ratio
 
 // Duration.
-    $duration-transition:       0.2s;
+    $duration-transition:       0.25s;
 
 // Size.
-    $size-border-radius:        0.35em;
+    $size-border-radius:        3px;
     $size-element-height:       2.75em;
     // $size-element-margin:       2em;
 
@@ -24,15 +24,15 @@
 
 // Color.
     $color-bg:                  #fff;
-    $color-fg:                  #a2a2a2;
-    $color-fg-bold:             #787878;
-    $color-fg-light:            #b2b2b2;
-    $color-border:              #efefef;
-    $color-border-bg:           #f7f7f7;
-    $color-border2:             #dfdfdf;
-    $color-border2-bg:          #e7e7e7;
+    $color-fg:                  #333;
+    $color-fg-bold:             #555;
+    $color-fg-light:            #666;
+    $color-border:              #eee;
+    $color-border-bg:           #f6f6f6;
+    $color-border2:             #ddd;
+    $color-border2-bg:          #e6e6e6;
 
-    $color-accent-bg:           #49bf9d;
+    $color-accent-bg:           #115c77;
     $color-accent-fg:           mix($color-accent-bg, #ffffff, 25%);
     $color-accent-fg-bold:      #ffffff;
     $color-accent-fg-light:     mix($color-accent-bg, #ffffff, 40%);
@@ -41,14 +41,17 @@
     $color-accent-border2:      rgba(255,255,255,0.5);
     $color-accent-border2-bg:   rgba(255,255,255,0.2);
     
-    $color-accent2-bg:          #1f1815;
-    $color-accent2-fg:          rgba(255,255,255,0.5);
+    $color-accent2-bg:          #082d3b;
+    $color-accent2-fg:          rgba(255,255,255,0.75);
     $color-accent2-fg-bold:     #ffffff;
-    $color-accent2-fg-light:    rgba(255,255,255,0.4);
+    $color-accent2-fg-light:    rgba(255,255,255,0.5);
     $color-accent2-border:      rgba(255,255,255,0.25);
     $color-accent2-border-bg:   rgba(255,255,255,0.075);
     $color-accent2-border2:     rgba(255,255,255,0.5);
     $color-accent2-border2-bg:  rgba(255,255,255,0.2);
+
+// Header Image.
+    $header-bg:                 '../images/bg.jpg';
 
 // Breakpoints
     $breakpoint-xlarge:         1800px;

@@ -39,6 +39,7 @@ Changelog (and differences to Strata by HTML5 Up)
     * use CSS3 media queries (instead of javascript switch)
     * separate layout elements
     * mobile first approach
+    * adjust Typography and font-size configuration
 
 Forked from: Strata by HTML5 UP
 --------------------------------------------------------------------------------

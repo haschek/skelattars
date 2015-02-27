@@ -1,16 +1,26 @@
+// Calculation Ratio
+
+    $calcratio:                 21/13; // appr. golden ratio
+
 // Duration.
     $duration-transition:       0.2s;
 
 // Size.
     $size-border-radius:        0.35em;
     $size-element-height:       2.75em;
-    $size-element-margin:       2em;
+    // $size-element-margin:       2em;
 
-// Font.
-    $font-family:               'Source Sans Pro', Helvetica, sans-serif;
-    $font-family-fixed:         'Courier New', monospace;
+// Typography.
+    $font-family:               'Source Sans Pro', sans-serif;
+    $font-family-fixed:         'Source Code Pro', monospace;
     $font-weight:               400;
-    $font-weight-bold:          400;
+    $font-weight-bold:          700;
+    
+    $fontsize-normal:           1em;
+    $lineheight-normal:         $calcratio; // do not use a unit here!
+    $fontsize-narrowed:         0.8em;
+    $fontsize-elevated:         1.25em;
+    $fontsize-title:            $fontsize-normal * $calcratio * $calcratio;
 
 // Color.
     $color-bg:                  #fff;

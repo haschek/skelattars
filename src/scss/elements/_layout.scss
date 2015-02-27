@@ -2,7 +2,7 @@
 
     #header {
     
-	    padding: 1.5em;
+	    padding: $size-element-margin;
 	    text-align: center;
 	    color: $color-accent2-fg;
 	    background-attachment:	scroll;
@@ -18,15 +18,15 @@
 	
 		& > * {
 			color: $color-accent2-fg;
-			font-size: 1.35em;
-			line-height: 1.75em;
+			font-size: $fontsize-elevated;
+			line-height: $lineheight-normal;
 			margin: 0;
 		}
 		
 		.image.avatar {
-			margin: 0 0 ($size-element-margin * 0.5) 0;
+			margin: 0 0 $size-element-margin 0;
 			font-size: 1em;
-			width: 6.25em;
+			width: 4 * $size-element-margin;
 		}
 
 	    br {
@@ -39,7 +39,7 @@
 
     #footer {
 
-	    padding: 1.5em;
+	    padding: $size-element-margin;
 	    text-align: center;
 	    color: $color-accent2-fg;
 	    background-attachment:	scroll;
@@ -59,7 +59,7 @@
 		
 	    .copyright {
 		    color: $color-accent2-fg-light;
-		    font-size: 0.8em;
+		    font-size: $fontsize-narrowed;
 		    list-style: none;
 		    margin: ($size-element-margin * 0.5) 0 0 0;
 		    padding: 0;
@@ -67,7 +67,6 @@
 		    li {
 			    // border-left-width: 0;
 			    display: block;
-			    // line-height: 2.25em;
 			    margin-left: 0;
 			    padding-left: 0;
 
@@ -82,7 +81,7 @@
 /* Main */
 
 	#main {
-		padding: 1.5em;
+		padding: $size-element-margin;
 		
 		/*
 		> header,
@@ -101,14 +100,14 @@
 @media screen and (min-width: #{$breakpoint-xsmall}) {
 
     #header, #main, #footer {
-        padding: 2.5em;
+        padding: $size-element-margin * $calcratio;
     }
 }
 
 @media screen and (min-width: #{$breakpoint-small}) {
 
     #header, #main, #footer {
-        padding: 4em;
+        padding: $size-element-margin * $calcratio * $calcratio;
     }
 
     /*
@@ -130,11 +129,12 @@
 	    #header {
 		    height: 100%;
 		    left: 0;
-		    padding: (3em * 2) 3em 3em 3em;
+		    padding: $size-element-margin * $calcratio;
+		    padding-top: $size-element-margin * $calcratio * $calcratio;
 		    position: fixed;
 		    text-align: right;
 		    top: 0;
-		    width: 30%;
+		    width: (100% - 100% / $calcratio) / $calcratio;
 		    background-attachment: scroll, fixed;
 
 	        br {
@@ -149,8 +149,10 @@
 		    position: fixed;
 		    bottom: 0;
 		    left: 0;
-		    width: 30%;
-		    padding: 0 3em 3em 1em;
+		    width: (100% - 100% / $calcratio) / $calcratio;
+		    padding: $size-element-margin * $calcratio;
+		    padding-top: 0;
+		    padding-left: $size-element-margin * 0.5;
 		    text-align: right;
 		
 		    .copyright {
@@ -175,9 +177,9 @@
     /* Main */
 
 	    #main {
-		    margin-left: 30%;
-		    padding: (3em * 2) 3em 3em 3em;
-		    width: 70%;
+		    margin-left: (100% - 100% / $calcratio) / $calcratio;
+		    padding: $size-element-margin * $calcratio;
+		    padding-top: $size-element-margin * $calcratio * $calcratio + $size-element-margin;
 	    }
 }
 
@@ -186,23 +188,26 @@
     /* Header */
 
 	    #header {
-		    padding: (4em * 2) 4em 4em 4em;
-		    width: 35%;
+		    padding: $size-element-margin * $calcratio * $calcratio;
+		    padding-top: $size-element-margin * $calcratio * $calcratio * $calcratio;
+		    width: 100% - 100% / $calcratio;
 	    }
 
     /* Footer */
 
 	    #footer {
-		    width: 35%;
-		    padding: 0 4em 4em 1em;
+		    width: 100% - 100% / $calcratio;
+		    padding: $size-element-margin * $calcratio * $calcratio;
+		    padding-top: 0;
+		    padding-left: $size-element-margin * 0.5;
 	    }
 
     /* Main */
 
 	    #main {
-		    margin-left: 35%;
-		    padding: (4em * 2) 4em 4em 4em;
-		    width: 65%;
+		    margin-left: 100% - 100% / $calcratio;
+		    padding: $size-element-margin * $calcratio * $calcratio;
+		    padding-top: $size-element-margin * $calcratio * $calcratio * $calcratio + $size-element-margin;
 		    max-width: 60em;
 	    }
 }

@@ -1,0 +1,30 @@
+/* Touch */
+
+	body.is-touch {
+
+		.image {
+			&.thumb {
+				&:before {
+					opacity: 0.5 !important;
+				}
+				
+				&:after {
+					display: none !important;
+				}
+			}
+		}
+
+		#header {
+			background-attachment:	scroll;
+			background-size:		auto, cover;
+		}
+
+		.poptrox-popup {
+			.nav-next,
+			.nav-previous,
+			.closer {
+				opacity: 1.0 !important;
+			}
+		}
+
+	}

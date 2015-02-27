@@ -1,0 +1,163 @@
+/* Poptrox */
+
+	/*
+	// TODO: problems with (nodejs) sass compiler
+	@include vendor-keyframes('spin') {
+		0% { @include vendor-property('transform', 'rotate(0deg)'); }
+		100% { @include vendor-property('transform', 'rotate(360deg)'); }
+	};
+	*/
+
+	.poptrox-popup {
+		@include vendor-property('box-sizing', 'content-box');
+		-webkit-tap-highlight-color: rgba(255,255,255,0);
+		background: #fff;
+		border-radius: $size-border-radius;
+		box-shadow: 0 0.1em 0.15em 0 rgba(0,0,0,0.15);
+		overflow: hidden;
+		padding-bottom: 3em;
+	
+		.loader {
+			@include icon;
+			@include vendor-property('animation', 'spin 1s linear infinite');
+			font-size: 1.5em;
+			height: 1em;
+			left: 50%;
+			line-height: 1em;
+			margin: -0.5em 0 0 -0.5em;
+			position: absolute;
+			top: 50%;
+			width: 1em;
+			
+			&:before {
+				content: '\f1ce';
+			}
+		}
+	
+		.caption {
+			background: #fff;
+			bottom: 0;
+			cursor: default;
+			font-size: 0.9em;
+			height: 3em;
+			left: 0;
+			line-height: 2.8em;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			z-index: 1;
+		}
+		
+		.nav-next,
+		.nav-previous {
+			@include icon;
+			@include vendor-property('transition', 'opacity #{$duration-transition} ease-in-out');
+			-webkit-tap-highlight-color: rgba(255,255,255,0);
+			background: rgba(0,0,0,0.01);
+			cursor: pointer;
+			height: 100%;
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			width: 50%;
+
+			&:before {
+				color: #fff;
+				font-size: 2.5em;
+				height: 1em;
+				line-height: 1em;
+				margin-top: -0.75em;
+				position: absolute;
+				text-align: center;
+				top: 50%;
+				width: 1.5em;
+			}
+		}
+			
+		.nav-next {
+			right: 0;
+
+			&:before {
+				content: '\f105';
+				right: 0;
+			}
+		}
+		
+		.nav-previous {
+			left: 0;
+
+			&:before {
+				content: '\f104';
+				left: 0;
+			}
+		}
+			
+		.closer {
+			@include icon;
+			@include vendor-property('transition', 'opacity #{$duration-transition} ease-in-out');
+			-webkit-tap-highlight-color: rgba(255,255,255,0);
+			color: #fff;
+			height: 4em;
+			line-height: 4em;
+			opacity: 0;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			top: 0;
+			width: 4em;
+			z-index: 2;
+		
+			&:before {
+				@include vendor-property('box-sizing', 'content-box');
+				border-radius: 100%;
+				border: solid 3px rgba(255,255,255,0.5);
+				content: '\f00d';
+				display: block;
+				font-size: 1em;
+				height: 1.75em;
+				left: 50%;
+				line-height: 1.75em;
+				margin: -0.875em 0 0 -0.875em;
+				position: absolute;
+				top: 50%;
+				width: 1.75em;
+			}
+		}
+
+		&:hover {
+			.nav-next,
+			.nav-previous {
+				opacity: 0.5;
+
+				&:hover {
+					opacity: 1.0;
+				}
+			}
+
+			.closer {
+				opacity: 0.5;
+
+				&:hover {
+					opacity: 1.0;
+				}
+			}
+		}
+	}
+
+
+@media screen and (max-width: #{$breakpoint-small}) {
+
+    /* Poptrox */
+
+	    .poptrox-popup {
+		    border-radius: 0;
+		
+		    .nav-next,
+		    .nav-previous {
+			    &:before {
+				    margin-top: -1em;
+			    }
+		    }
+	    }
+}
+

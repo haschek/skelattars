@@ -35,6 +35,9 @@ Changelog (and differences to Strata by HTML5 Up)
 * Skelattars v0.5.0-dev
     * demo content
     * do not force optical borders as horizontal rules after sections
+    * disable full IE support
+    * use CSS3 media queries (instead of javascript switch)
+    * separate layout elements
 
 Forked from: Strata by HTML5 UP
 --------------------------------------------------------------------------------

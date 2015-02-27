@@ -1,7 +1,7 @@
 /*
-    Strata by HTML5 UP
-    html5up.net | @n33co
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Skelattars Template, forked from Strata by HTML5 UP.
+    Free for personal and commercial use under the CC-BY 3.0 license.
+    @see https://github.com/haschek/skelattars
 */
 
 (function($) {
@@ -31,10 +31,10 @@
         */
         breakpoints: {
             xlarge: { media: '(max-width: 1800px)' },
-            large: { media: '(max-width: 1280px)' },
-            medium: { media: '(max-width: 980px)' },
-            small: { media: '(max-width: 736px)', viewport: { scalable: false } },
-            xsmall: { media: '(max-width: 480px)' }
+            large:  { media: '(max-width: 1280px)' },
+            medium: { media: '(max-width: 980px)'  },
+            small:  { media: '(max-width: 736px)'  },
+            xsmall: { media: '(max-width: 480px)'  }
         }
     });
 

@@ -1,9 +1,0 @@
-h1 br,h2 br,h3 br,h4 br,h5 br,h6 br{display:none}
-ul.icons li .icon{font-size:1.25em}
-#header{background-attachment:scroll;background-position:top left,center center;background-size:auto,cover;left:auto;padding:6em 4em;position:relative;text-align:center;top:auto;width:100%}
-#header h1{font-size:1.75em}
-#header h1 br{display:inline}
-#footer{background:url(../images/bg.jpg) bottom center/cover no-repeat #1f1815;bottom:auto;left:auto;padding:4em 4em 6em;position:relative;text-align:center;width:100%}
-#footer .copyright,#footer .icons{margin:0 0 1em}
-#footer .copyright li{border-left-width:1px;display:inline-block;line-height:1em;margin-left:.75em;padding-left:.75em}
-#main{margin:0;padding:6em 4em;width:100%}

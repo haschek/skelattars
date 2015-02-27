@@ -725,7 +725,7 @@ ul {
     list-style: none;
     padding: 0; }
     ul.labeled-icons li {
-      line-height: 1.75;
+      line-height: 1.61538;
       margin: 1.5em 0 0 0;
       padding-left: 2em;
       position: relative; }
@@ -738,9 +738,10 @@ ul {
         left: 0;
         position: absolute;
         text-align: center;
-        top: 0;
+        top: -0.20192em;
         width: 1em;
-        line-height: 1.75; }
+        line-height: 1.61538;
+        margin: 0; }
 
 dl {
   margin: 0 0 1.61538em 0; }

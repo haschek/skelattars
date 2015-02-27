@@ -161,10 +161,10 @@ ul.icons li:last-child{padding-right:0}
 ul.icons li .icon{font-size:1.25em}
 ul.icons li .icon:before{font-size:1.5em}
 ul.labeled-icons{list-style:none;padding:0}
-ul.labeled-icons li{line-height:1.75;margin:1.5em 0 0;padding-left:2em;position:relative}
+ul.labeled-icons li{line-height:1.61538;margin:1.5em 0 0;padding-left:2em;position:relative}
 ul.labeled-icons li:first-child{margin-top:0}
 ul.labeled-icons li a{color:inherit}
-ul.labeled-icons li h3{color:#666;left:0;position:absolute;text-align:center;top:0;width:1em;line-height:1.75}
+ul.labeled-icons li h3{color:#666;left:0;position:absolute;text-align:center;top:-.20192em;width:1em;line-height:1.61538;margin:0}
 .work-item,dl{margin:0 0 1.61538em}
 .work-item .image{margin:0 0 .80769em}
 .work-item h2,.work-item h3,.work-item h4{font-size:1em;margin:0 0 .40385em}

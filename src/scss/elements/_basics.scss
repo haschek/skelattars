@@ -425,7 +425,7 @@
 			padding: 0;
 			
 			li {
-				line-height: 1.75;
+				line-height: $lineheight-normal;
 				margin: 1.5em 0 0 0;
 				padding-left: 2em;
 				position: relative;
@@ -443,9 +443,10 @@
 					left: 0;
 					position: absolute;
 					text-align: center;
-					top: 0;
+					top: $size-element-margin * -0.125;
 					width: 1em;
-					line-height: 1.75;
+					line-height: $lineheight-normal;
+					margin: 0;
 				}
 			}
 		}

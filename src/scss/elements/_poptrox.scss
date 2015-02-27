@@ -12,7 +12,7 @@
 		@include vendor-property('box-sizing', 'content-box');
 		-webkit-tap-highlight-color: rgba(255,255,255,0);
 		background: #fff;
-		border-radius: $size-border-radius;
+		border-radius: 0;
 		box-shadow: 0 0.1em 0.15em 0 rgba(0,0,0,0.15);
 		overflow: hidden;
 		padding-bottom: 3em;
@@ -66,7 +66,7 @@
 				font-size: 2.5em;
 				height: 1em;
 				line-height: 1em;
-				margin-top: -0.75em;
+				margin-top: -1em;
 				position: absolute;
 				text-align: center;
 				top: 50%;
@@ -145,17 +145,17 @@
 	}
 
 
-@media screen and (max-width: #{$breakpoint-small}) {
+@media screen and (min-width: #{$breakpoint-small}) {
 
     /* Poptrox */
 
 	    .poptrox-popup {
-		    border-radius: 0;
+		    border-radius: $size-border-radius;
 		
 		    .nav-next,
 		    .nav-previous {
 			    &:before {
-				    margin-top: -1em;
+				    margin-top: -0.75em;
 			    }
 		    }
 	    }

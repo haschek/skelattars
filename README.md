@@ -38,6 +38,7 @@ Changelog (and differences to Strata by HTML5 Up)
     * disable full IE support
     * use CSS3 media queries (instead of javascript switch)
     * separate layout elements
+    * mobile first approach
 
 Forked from: Strata by HTML5 UP
 --------------------------------------------------------------------------------

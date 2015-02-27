@@ -14,7 +14,7 @@
 	body, input, select, textarea {
 		color: $color-fg;
 		font-family: $font-family;
-		font-size: 16pt;
+		font-size: 12pt;
 		font-weight: $font-weight;
 		line-height: 1.75em;
 	}
@@ -55,20 +55,24 @@
 			color: inherit;
 			text-decoration: none;
 		}
+
+	    br {
+		    display: none;
+	    }
 	}
 
 	h1 {
-		font-size: 2em;
-		line-height: 1.5em;
-	}
-
-	h2 {
 		font-size: 1.5em;
 		line-height: 1.5em;
 	}
 
-	h3 {
+	h2 {
 		font-size: 1.25em;
+		line-height: 1.5em;
+	}
+
+	h3 {
+		font-size: 1.1em;
 		line-height: 1.5em;
 	}
 
@@ -198,7 +202,7 @@
 		&.major {
 		    h1,
 			h2 {
-				font-size: 2em;
+				font-size: 1.5em;
 			}
 		}
 	}
@@ -394,81 +398,10 @@
 				}
 				
 				.icon {
+				    font-size: 1.25em;
+				
 					&:before {
 						font-size: 1.5em;
-					}
-				}
-			}
-		}
-		
-		&.actions {
-			cursor: default;
-			list-style: none;
-			padding-left: 0;
-			
-			li {
-				display: inline-block;
-				padding: 0 ($size-element-margin * 0.5) 0 0;
-				vertical-align: middle;
-			
-				&:last-child {
-					padding-right: 0;
-				}
-			}
-			
-			&.small {
-				li {
-					padding: 0 ($size-element-margin * 0.25) 0 0;
-				}
-			}
-			
-			&.vertical {
-				li {
-					display: block;
-					padding: ($size-element-margin * 0.5) 0 0 0;
-					
-					&:first-child {
-						padding-top: 0;
-					}
-
-					> * {
-						margin-bottom: 0;
-					}
-				}
-				
-				&.small {
-					li {
-						padding: ($size-element-margin * 0.25) 0 0 0;
-
-						&:first-child {
-							padding-top: 0;
-						}
-					}
-				}
-			}
-			
-			&.fit {
-				display: table;
-				margin-left: ($size-element-margin * -0.5);
-				padding: 0;
-				table-layout: fixed;
-				width: calc(100% + #{($size-element-margin * 0.5)});
-				
-				li {
-					display: table-cell;
-					padding: 0 0 0 ($size-element-margin * 0.5);
-					
-					> * {
-						margin-bottom: 0;
-					}
-				}
-				
-				&.small {
-					margin-left: ($size-element-margin * -0.25);
-					width: calc(100% + #{($size-element-margin * 0.25)});
-
-					li {
-						padding: 0 0 0 ($size-element-margin * 0.25);
 					}
 				}
 			}
@@ -481,7 +414,7 @@
 			li {
 				line-height: 1.75em;
 				margin: 1.5em 0 0 0;
-				padding-left: 2.25em;
+				padding-left: 2em;
 				position: relative;
 				
 				&:first-child {
@@ -499,6 +432,7 @@
 					text-align: center;
 					top: 0;
 					width: 1em;
+					line-height: 1.75;
 				}
 			}
 		}
@@ -531,66 +465,28 @@
 
 
 
-@media screen and (max-width: #{$breakpoint-xlarge}) {
-
-    /* Basic */
-
-	    body, input, select, textarea {
-		    font-size: 12pt;
-	    }
-}
-
-@media screen and (max-width: #{$breakpoint-medium}) {
-
-    /* Basic */
-
-	    h1, h2, h3, h4, h5, h6 {
-		    br {
-			    display: none;
-		    }
-	    }
-
-    /* List */
-
-	    ul {
-		    &.icons {
-			    li {
-				    .icon {
-					    font-size: 1.25em;
-				    }
-			    }
-		    }
-	    }
-}
-
-@media screen and (max-width: #{$breakpoint-small}) {
+@media screen and (min-width: #{$breakpoint-small}) {
 
     /* Basic */
 
 	    h1 {
-		    font-size: 1.5em;
+		    font-size: 2em;
 	    }
 
 	    h2 {
-		    font-size: 1.2em;
+		    font-size: 1.5em;
 	    }
 
 	    h3 {
-		    font-size: 1em;
+		    font-size: 1.25em;
 	    }
 
     /* Section/Article */
 
-	    section, article {
-		    &.special {
-			    text-align: center;
-		    }
-	    }
-
 	    header {
 		    &.major {
-			    h2 {
-				    font-size: 1.35em;
+			    h1, h2 {
+				    font-size: 2em;
 			    }
 		    }
 	    }
@@ -600,10 +496,10 @@
 	    ul {
 		    &.labeled-icons {
 			    li {
-				    padding-left: 2em;
+				    padding-left: 2.25em;
 
 				    h3 {
-					    line-height: 1.75em;
+					    line-height: inherit;
 				    }
 			    }
 		    }
@@ -611,47 +507,35 @@
 
 }
 
-@media screen and (max-width: #{$breakpoint-xsmall}) {
+@media screen and (min-width: #{$breakpoint-medium}) {
+
+    /* Basic */
+
+	    h1, h2, h3, h4, h5, h6 {
+		    br {
+			    display: inherit;
+		    }
+	    }
 
     /* List */
 
 	    ul {
-		    &.actions {
-			    margin: 0 0 $size-element-margin 0;
-			
+		    &.icons {
 			    li {
-				    display: block;
-				    padding: ($size-element-margin * 0.5) 0 0 0;
-				    text-align: center;
-				    width: 100%;
-				
-				    &:first-child {
-					    padding-top: 0;
-				    }
-				
-				    > * {
-					    margin: 0 !important;
-					    width: 100%;
-					
-					    &.icon {
-						    &:before {
-							    margin-left: -2em;
-						    }
-					    }
-				    }
-			    }
-			
-			    &.small {
-				    li {
-					    padding: ($size-element-margin * 0.25) 0 0 0;
-
-					    &:first-child {
-						    padding-top: 0;
-					    }
+				    .icon {
+					    font-size: inherit;
 				    }
 			    }
 		    }
 	    }
+}
 
+@media screen and (min-width: #{$breakpoint-xlarge}) {
+
+    /* Basic */
+
+	    body, input, select, textarea {
+		    font-size: 16pt;
+	    }
 }
 

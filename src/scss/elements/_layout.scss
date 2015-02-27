@@ -1,32 +1,21 @@
-$size-header-width:		35%;
-$size-header-pad:		4em;
-
 /* Header */
 
-	#header {
-		background-color:		$color-accent2-bg;
-		background-attachment:	scroll,								fixed;
-		background-image:		url('images/overlay.png'),			url('../images/bg.jpg');
-		background-position:	top left,							top left;
-		background-repeat:		repeat,								no-repeat;
-		background-size:		auto,								auto 100%;
-		color: $color-accent2-fg;
-		height: 100%;
-		left: 0;
-		padding: ($size-header-pad * 2) $size-header-pad 0 $size-header-pad;
-		position: fixed;
-		text-align: right;
-		top: 0;
-		width: $size-header-width;
+    #header {
+    
+	    padding: 1.5em;
+	    text-align: center;
+	    color: $color-accent2-fg;
+	    background-attachment:	scroll;
+	    background-color:		$color-accent2-bg;
+	    background-image:		url('images/overlay.png'),		url('../images/bg.jpg');
+	    background-position:	top left,						center center;
+	    background-repeat:		repeat,							no-repeat;
+	    background-size:		auto,							cover;
 	
 		strong, b {
 			color: $color-accent2-fg-bold;
 		}
 	
-		h2, h3, h4, h5, h6 {
-			color: $color-accent2-fg-bold;
-		}
-		
 		& > * {
 			color: $color-accent2-fg;
 			font-size: 1.35em;
@@ -39,175 +28,146 @@ $size-header-pad:		4em;
 			font-size: 1em;
 			width: 6.25em;
 		}
-	}
+
+	    br {
+		    display: none;
+	    }
+    }
+
 
 /* Footer */
 
-	#footer {
-		bottom: 0;
-		left: 0;
-		padding: 0 $size-header-pad ($size-header-pad + $size-element-margin) 0;
-		position: fixed;
-		text-align: right;
-		width: $size-header-width;
+    #footer {
+
+	    padding: 1.5em;
+	    text-align: center;
+	    color: $color-accent2-fg;
+	    background-attachment:	scroll;
+	    background-color:		$color-accent2-bg;
+	    background-image:		url('images/overlay.png'),		url('../images/bg.jpg');
+	    background-position:	top left,						bottom center;
+	    background-repeat:		repeat,							no-repeat;
+	    background-size:		auto,							cover;
+
+	    .icons {
+		    margin: ($size-element-margin * 0.5) 0 0 0;
 		
-		.icons {
-			margin: ($size-element-margin * 0.5) 0 0 0;
-			
-			a {
-				color: $color-accent2-fg-light;
-			}
-		}
+		    a {
+			    color: $color-accent2-fg-light;
+		    }
+	    }
 		
-		.copyright {
-			color: $color-accent2-fg-light;
-			font-size: 0.8em;
-			list-style: none;
-			margin: ($size-element-margin * 0.5) 0 0 0;
-			padding: 0;
-			
-			li {
-				border-left: solid 1px $color-accent2-border;
-				display: inline-block;
-				line-height: 1em;
-				margin-left: 0.75em;
-				padding-left: 0.75em;
-				
-				&:first-child {
-					border-left: 0;
-					margin-left: 0;
-					padding-left: 0;
-				}
-				
-				a {
-					color: inherit;
-				}
-			}
-		}
-	}
+	    .copyright {
+		    color: $color-accent2-fg-light;
+		    font-size: 0.8em;
+		    list-style: none;
+		    margin: ($size-element-margin * 0.5) 0 0 0;
+		    padding: 0;
+
+		    li {
+			    // border-left-width: 0;
+			    display: block;
+			    // line-height: 2.25em;
+			    margin-left: 0;
+			    padding-left: 0;
+
+			    a {
+				    color: inherit;
+			    }
+		    }
+	    }
+    }
+
 
 /* Main */
 
 	#main {
-		margin-left: $size-header-width;
-		max-width: 50em + $size-header-pad;
-		padding: ($size-header-pad * 2) $size-header-pad $size-header-pad $size-header-pad;
-		width: calc(100% - #{$size-header-width});
+		padding: 1.5em;
 		
+		/*
 		> header,
 		> section,
 		> footer {
-			margin: $size-header-pad 0;
+			margin: 1.5em 0;
 			
 			&:first-child {
 				margin-top: 0;
 				padding-top: 0;
 			}
 		}
+		*/
 	}
 
-@media screen and (max-width: #{$breakpoint-large}) {
+@media screen and (min-width: #{$breakpoint-xsmall}) {
 
-    $size-header-width:		30%;
-    $size-header-pad:		3em;
-
-    /* Header */
-
-	    #header {
-		    padding: ($size-header-pad * 2) $size-header-pad $size-header-pad $size-header-pad;
-		    width: $size-header-width;
-
-		    h1 {
-			    font-size: 1.25em;
-			
-			    br {
-				    display: none;
-			    }
-		    }
-	    }
-
-    /* Footer */
-
-	    #footer {
-		    padding: 0 $size-header-pad ($size-header-pad + $size-element-margin) $size-header-pad;
-		    width: $size-header-width;
-
-		    .copyright {
-			    li {
-				    border-left-width: 0;
-				    display: block;
-				    line-height: 2.25em;
-				    margin-left: 0;
-				    padding-left: 0;
-			    }
-		    }
-	    }
-
-    /* Main */
-
-	    #main {
-		    margin-left: $size-header-width;
-		    max-width: none;
-		    padding: ($size-header-pad * 2) $size-header-pad $size-header-pad $size-header-pad;
-		    width: calc(100% - #{$size-header-width});
-	    }
+    #header, #main, #footer {
+        padding: 2.5em;
+    }
 }
 
-@media screen and (max-width: #{$breakpoint-medium}) {
+@media screen and (min-width: #{$breakpoint-small}) {
 
-    $size-header-pad:		4em;
+    #header, #main, #footer {
+        padding: 4em;
+    }
+
+    /*
+    #main {
+	    padding: ($size-header-pad * 1.5) $size-header-pad (($size-header-pad * 1.5) - $size-element-margin) $size-header-pad;
+
+	    > section {
+		    margin: ($size-header-pad * 1.5) 0 0 0;
+		    padding: ($size-header-pad * 1.5) 0 0 0;
+	    }
+    }
+    */
+}
+
+@media screen and (min-width: #{$breakpoint-medium}) {
 
     /* Header */
-
+    
 	    #header {
-		    background-attachment:	scroll;
-		    background-position:	top left,	center center;
-		    background-size:		auto,		cover;
-		    left: auto;
-		    padding: ($size-header-pad * 1.5) $size-header-pad;
-		    position: relative;
-		    text-align: center;
-		    top: auto;
-		    width: 100%;
-		
-		    h1 {
-			    font-size: 1.75em;
-			
-			    br {
-				    display: inline;
-			    }
-		    }
+		    height: 100%;
+		    left: 0;
+		    padding: (3em * 2) 3em 3em 3em;
+		    position: fixed;
+		    text-align: right;
+		    top: 0;
+		    width: 30%;
+		    background-attachment: scroll, fixed;
+
+	        br {
+		        display: inherit;
+	        }
 	    }
 
     /* Footer */
 
 	    #footer {
-		    background-attachment:	scroll;
-		    background-color:		$color-accent2-bg;
-		    background-image:		url('images/overlay.png'),		url('../images/bg.jpg');
-		    background-position:	top left,						bottom center;
-		    background-repeat:		repeat,							no-repeat;
-		    background-size:		auto,							cover;
-		    bottom: auto;
-		    left: auto;
-		    padding: $size-header-pad $size-header-pad ($size-header-pad * 1.5) $size-header-pad;
-		    position: relative;
-		    text-align: center;
-		    width: 100%;
-
-		    .icons {
-			    margin: 0 0 ($size-element-margin * 0.5) 0;
-		    }
-
+	        background: transparent;
+		    position: fixed;
+		    bottom: 0;
+		    left: 0;
+		    width: 30%;
+		    padding: 0 3em 3em 1em;
+		    text-align: right;
+		
 		    .copyright {
-			    margin: 0 0 ($size-element-margin * 0.5) 0;
-
+			
 			    li {
-				    border-left-width: 1px;
+				    border-left: solid 1px $color-accent2-border;
 				    display: inline-block;
-				    line-height: 1em;
+				    line-height: 1;
 				    margin-left: 0.75em;
 				    padding-left: 0.75em;
+				
+				    &:first-child {
+					    border-left: 0;
+					    margin-left: 0;
+					    padding-left: 0;
+				    }
+				
 			    }
 		    }
 	    }
@@ -215,72 +175,35 @@ $size-header-pad:		4em;
     /* Main */
 
 	    #main {
-		    margin: 0;
-		    padding: ($size-header-pad * 1.5) $size-header-pad;
-		    width: 100%;
+		    margin-left: 30%;
+		    padding: (3em * 2) 3em 3em 3em;
+		    width: 70%;
 	    }
 }
 
-@media screen and (max-width: #{$breakpoint-small}) {
-
-    $size-header-pad:		1.5em;
+@media screen and (min-width: #{$breakpoint-large}) {
 
     /* Header */
 
 	    #header {
-		    padding: ($size-header-pad * 1.5) $size-header-pad;
-		
-		    h1 {
-			    font-size: 1.35em;
-		    }
+		    padding: (4em * 2) 4em 4em 4em;
+		    width: 35%;
 	    }
 
     /* Footer */
 
 	    #footer {
-		    padding: ($size-header-pad * 1.5) $size-header-pad;
+		    width: 35%;
+		    padding: 0 4em 4em 1em;
 	    }
-	
+
     /* Main */
 
 	    #main {
-		    padding: ($size-header-pad * 1.5) $size-header-pad (($size-header-pad * 1.5) - $size-element-margin) $size-header-pad;
-
-		    > section {
-			    margin: ($size-header-pad * 1.5) 0 0 0;
-			    padding: ($size-header-pad * 1.5) 0 0 0;
-		    }
-	    }
-}
-
-@media screen and (max-width: #{$breakpoint-xsmall}) {
-
-    $size-header-pad:		1.5em;
-
-    /* Header */
-
-	    #header {
-		    padding: ($size-header-pad * 3) $size-header-pad;
-
-		    h1 {
-			    br {
-				    display: none;
-			    }
-		    }
-	    }
-
-    /* Footer */
-
-	    #footer {
-		    .copyright {
-			    li {
-				    border-left-width: 0;
-				    display: block;
-				    line-height: 2.25em;
-				    margin-left: 0;
-				    padding-left: 0;
-			    }
-		    }
+		    margin-left: 35%;
+		    padding: (4em * 2) 4em 4em 4em;
+		    width: 65%;
+		    max-width: 60em;
 	    }
 }
 

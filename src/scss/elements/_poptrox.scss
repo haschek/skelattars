@@ -62,7 +62,8 @@
 			width: 50%;
 
 			&:before {
-				color: #fff;
+				color: $color-bg;
+				text-shadow: 0 0 1px $color-fg;
 				font-size: 2.5em;
 				height: 1em;
 				line-height: 1em;
@@ -121,6 +122,9 @@
 				position: absolute;
 				top: 50%;
 				width: 1.75em;
+				color: $color-bg;
+				text-shadow: 0 0 1px $color-fg;
+				box-shadow: 0 0 1px $color-fg;
 			}
 		}
 

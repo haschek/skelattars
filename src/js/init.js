@@ -30,11 +30,11 @@
         }
         */
         breakpoints: {
-            xlarge: { media: '(max-width: 1800px)' },
-            large:  { media: '(max-width: 1280px)' },
-            medium: { media: '(max-width: 980px)'  },
-            small:  { media: '(max-width: 736px)'  },
-            xsmall: { media: '(max-width: 480px)'  }
+            xlarge: { media: '(max-width: 1800px)', href: false },
+            large:  { media: '(max-width: 1280px)', href: false },
+            medium: { media: '(max-width: 980px)', href: false  },
+            small:  { media: '(max-width: 736px)', href: false  },
+            xsmall: { media: '(max-width: 480px)', href: false  }
         }
     });
 

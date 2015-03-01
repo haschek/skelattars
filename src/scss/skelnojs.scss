@@ -1,0 +1,18 @@
+@import 'vars';
+
+@import 'skel';
+
+@media screen and (max-width: #{$breakpoint-small}) {
+
+    .\31 u, .\32 u, .\33 u, .\34 u, .\35 u, .\36 u,
+    .\37 u, .\38 u, .\39 u, .\31 0u, .\31 1u, .\31 2u,
+    .\31 u\$, .\32 u\$, .\33 u\$, .\34 u\$, .\35 u\$, .\36 u\$,
+    .\37 u\$, .\38 u\$, .\39 u\$, .\31 0u\$, .\31 1u\$, .\31 2u\$
+    {
+        // padding: 0;
+        clear: both;
+        width: auto;
+        margin-left: 0;
+    }
+
+}

@@ -59,3 +59,16 @@
     $breakpoint-medium:         981px;
     $breakpoint-small:          737px;
     $breakpoint-xsmall:         481px;
+
+
+// Calculations -- don't change it
+
+    $size-element-margin: 1em * $lineheight-normal !default;
+    
+    $fontsize-h1: $fontsize-title !default;
+    $fontsize-h2: ($fontsize-title + $fontsize-normal) / 2 !default;
+    $fontsize-h3: ($fontsize-title + $fontsize-normal * 2) / 3 !default;
+    $fontsize-h4: ($fontsize-title + $fontsize-normal * 3) / 4 !default;
+
+
+

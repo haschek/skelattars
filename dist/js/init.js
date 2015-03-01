@@ -19,22 +19,12 @@
     skel.init({
         reset: 'full',
         containers: '100%',
-        /*
         breakpoints: {
-            global: { href: 'css/style.css', grid: { gutters: ['2.5em', 0] } },
-            xlarge: { media: '(max-width: 1800px)', href: 'css/style-xlarge.css' },
-            large: { media: '(max-width: 1280px)', href: 'css/style-large.css', grid: { gutters: ['2em', 0] } },
-            medium: { media: '(max-width: 980px)', href: 'css/style-medium.css'},
-            small: { media: '(max-width: 736px)', href: 'css/style-small.css', grid: { gutters: ['1.5em', 0] }, viewport: { scalable: false } },
-            xsmall: { media: '(max-width: 480px)', href: 'css/style-xsmall.css' }
-        }
-        */
-        breakpoints: {
-            xlarge: { media: '(max-width: 1800px)', href: false },
-            large:  { media: '(max-width: 1280px)', href: false },
-            medium: { media: '(max-width: 980px)', href: false  },
-            small:  { media: '(max-width: 736px)', href: false  },
-            xsmall: { media: '(max-width: 480px)', href: false  }
+            xlarge: { media: '(min-width: 1801px)', href: false },
+            large:  { media: '(min-width: 1281px)', href: false },
+            medium: { media: '(min-width: 981px)', href: false  },
+            small:  { media: '(min-width: 737px)', href: false  },
+            xsmall: { media: '(min-width: 481px)', href: false  }
         }
     });
 

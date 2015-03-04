@@ -20,11 +20,11 @@
         reset: 'full',
         containers: '100%',
         breakpoints: {
-            xlarge: { media: '(min-width: 1801px)', href: false },
-            large:  { media: '(min-width: 1281px)', href: false },
-            medium: { media: '(min-width: 981px)', href: false  },
+            xsmall: { media: '(min-width: 481px)', href: false  },
             small:  { media: '(min-width: 737px)', href: false  },
-            xsmall: { media: '(min-width: 481px)', href: false  }
+            medium: { media: '(min-width: 981px)', href: false  },
+            large:  { media: '(min-width: 1281px)', href: false },
+            xlarge: { media: '(min-width: 1801px)', href: false }
         }
     });
 
@@ -288,7 +288,7 @@
                         $body.removeClass('fixedheader-on');
                     }
                     
-                    $header.css('background-position', '');
+                    //$header.css('background-position', '');
 
                     // $window.trigger('scroll.strata_parallax');
                     
@@ -305,7 +305,7 @@
                 if (settings.parallax) {
 
                     skel.change(function() {
-                    
+                        $header.css('background-position', '');
                         $window.trigger('resize');
 
                         if (!skel.isActive('medium')) {

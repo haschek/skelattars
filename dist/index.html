@@ -15,8 +15,8 @@
         <script src="js/skel.min.js">
 </script>
         <script src="js/init.js">
-</script>
-        <link rel="stylesheet" href="css/skelnojs.css">
+</script><noscript>
+        <link rel="stylesheet" href="css/skelnojs.css"></noscript>
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic|Source+Code+Pro">
     </head>
@@ -49,7 +49,7 @@
                     Recent Work
                 </h2>
                 <ol class="row">
-                    <li class="6u 12u$(xsmall) work-item">
+                    <li class="6u(small) work-item">
                         <a href="images/fulls/screenshot-skelattars-small.jpg" class="image fit thumb"><img src="images/thumbs/screenshot-skelattars-small.jpg" alt=""></a>
                         <h3>
                             Screenshot Small Display
@@ -58,7 +58,7 @@
                             Lorem ipsum dolor sit amet nisl sed nullam feugiat.
                         </p>
                     </li>
-                    <li class="6u$ 12u$(xsmall) work-item">
+                    <li class="6u$(small) work-item">
                         <a href="images/fulls/screenshot-skelattars-large.jpg" class="image fit thumb"><img src="images/thumbs/screenshot-skelattars-large.jpg" alt=""></a>
                         <h3>
                             Screenshot Large Display
@@ -67,7 +67,7 @@
                             Lorem ipsum dolor sit amet nisl sed nullam feugiat.
                         </p>
                     </li>
-                    <li class="4u 12u$(xsmall) work-item">
+                    <li class="6u(small) 4u(medium) work-item">
                         <a href="images/fulls/screenshot-skelattars-xsmall.jpg" class="image fit thumb"><img src="images/thumbs/screenshot-skelattars-xsmall.jpg" alt=""></a>
                         <h3>
                             Screenshot Extra Small Display
@@ -76,7 +76,7 @@
                             Lorem ipsum dolor sit amet nisl sed nullam feugiat.
                         </p>
                     </li>
-                    <li class="4u 12u$(xsmall) work-item">
+                    <li class="6u$(small) 4u(medium) work-item">
                         <a href="images/fulls/screenshot-skelattars-medium.jpg" class="image fit thumb"><img src="images/thumbs/screenshot-skelattars-medium.jpg" alt=""></a>
                         <h3>
                             Screenshot Medium Display
@@ -85,7 +85,7 @@
                             Lorem ipsum dolor sit amet nisl sed nullam feugiat.
                         </p>
                     </li>
-                    <li class="4u$ 12u$(xsmall) work-item">
+                    <li class="6u(small) 4u$(medium) work-item">
                         <a href="images/fulls/screenshot-skelattars-xlarge.jpg" class="image fit thumb"><img src="images/thumbs/screenshot-skelattars-xlarge.jpg" alt=""></a>
                         <h3>
                             Screenshot Extra Large Display
@@ -110,7 +110,7 @@
                     Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.
                 </p>
                 <div class="row">
-                    <div class="8u 12u$(small)">
+                    <div class="8u(medium) 12u$">
                         <form method="post" action="#">
                             <div class="row uniform 50%">
                                 <div class="6u 12u$(xsmall)">
@@ -131,7 +131,7 @@
                             </ul>
                         </form>
                     </div>
-                    <div class="4u$ 12u$(small)">
+                    <div class="4u$(medium) 12u$">
                         <ul class="labeled-icons">
                             <li>
                                 <h3 class="icon fa-home">
@@ -225,7 +225,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
                         Lists
                     </h3>
                     <div class="row">
-                        <div class="6u 12u$(xsmall)">
+                        <div class="6u(small) 12u$">
                             <h5>
                                 Unordered
                             </h5>
@@ -249,7 +249,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
                                 </li>
                             </ul>
                         </div>
-                        <div class="6u$ 12u$(xsmall)">
+                        <div class="6u$(small) 12u$">
                             <h5>
                                 Ordered
                             </h5>
@@ -512,7 +512,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
                         Action Lists
                     </h3>
                     <div class="row">
-                        <div class="3u 12u$(small)">
+                        <div class="3u(small) 12u$">
                             <h4>
                                 Vertical
                             </h4>
@@ -528,7 +528,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
                                 </li>
                             </ul>
                         </div>
-                        <div class="9u$ 12u$(small)">
+                        <div class="9u$(small) 12u$">
                             <h4>
                                 Horizonal
                             </h4>
@@ -570,10 +570,10 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
                     </h3>
                     <form method="post" action="#">
                         <div class="row uniform 50%">
-                            <div class="6u 12u$(xsmall)">
+                            <div class="6u(small) 12u$">
                                 <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name">
                             </div>
-                            <div class="6u$ 12u$(xsmall)">
+                            <div class="6u$(small) 12u$">
                                 <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email">
                             </div>
                             <div class="12u$">
@@ -597,19 +597,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
                                     </select>
                                 </div>
                             </div>
-                            <div class="4u 12u$(small)">
+                            <div class="4u(small) 12u$">
                                 <input type="radio" id="demo-priority-low" name="demo-priority" checked> <label for="demo-priority-low">Low Priority</label>
                             </div>
-                            <div class="4u 12u$(small)">
+                            <div class="4u(small) 12u$">
                                 <input type="radio" id="demo-priority-normal" name="demo-priority"> <label for="demo-priority-normal">Normal Priority</label>
                             </div>
-                            <div class="4u$ 12u(small)">
+                            <div class="4u$(small) 12u">
                                 <input type="radio" id="demo-priority-high" name="demo-priority"> <label for="demo-priority-high">High Priority</label>
                             </div>
-                            <div class="6u 12u$(small)">
+                            <div class="6u(small) 12u$">
                                 <input type="checkbox" id="demo-copy" name="demo-copy"> <label for="demo-copy">Email me a copy of this message</label>
                             </div>
-                            <div class="6u$ 12u$(small)">
+                            <div class="6u$(small) 12u$">
                                 <input type="checkbox" id="demo-human" name="demo-human" checked> <label for="demo-human">I am a human and not a robot</label>
                             </div>
                             <div class="12u$">
@@ -642,31 +642,31 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
                             <li class="12u$">
                                 <span class="image fit"><img src="images/fulls/05.jpg" alt=""></span>
                             </li>
-                            <li class="6u">
+                            <li class="6u(small)">
                                 <span class="image fit"><img src="images/thumbs/01.jpg" alt=""></span>
                             </li>
-                            <li class="6u$">
+                            <li class="6u$(small)">
                                 <span class="image fit"><img src="images/thumbs/02.jpg" alt=""></span>
                             </li>
-                            <li class="4u">
+                            <li class="6u(small) 4u(medium)">
                                 <span class="image fit"><img src="images/thumbs/03.jpg" alt=""></span>
                             </li>
-                            <li class="4u">
+                            <li class="6u$(small) 4u(medium)">
                                 <span class="image fit"><img src="images/thumbs/04.jpg" alt=""></span>
                             </li>
-                            <li class="4u$">
+                            <li class="6u(small) 4u$(medium)">
                                 <span class="image fit"><img src="images/thumbs/05.jpg" alt=""></span>
                             </li>
-                            <li class="3u">
+                            <li class="6u$(small) 3u(medium)">
                                 <span class="image fit"><img src="images/thumbs/06.jpg" alt=""></span>
                             </li>
-                            <li class="3u">
+                            <li class="4u(small) 3u(medium)">
                                 <span class="image fit"><img src="images/thumbs/03.jpg" alt=""></span>
                             </li>
-                            <li class="3u">
+                            <li class="4u(small) 3u(medium)">
                                 <span class="image fit"><img src="images/thumbs/02.jpg" alt=""></span>
                             </li>
-                            <li class="3u$">
+                            <li class="4u$(small) 3u$(medium)">
                                 <span class="image fit"><img src="images/thumbs/01.jpg" alt=""></span>
                             </li>
                         </ol>

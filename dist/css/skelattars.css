@@ -490,7 +490,7 @@ dl {
       position: fixed;
       background-attachment: scroll;
       background-size: auto, cover;
-      background-position: top left, top center; }
+      background-position: center top; }
     #header br {
       display: inherit; }
   #footer {
@@ -530,6 +530,8 @@ dl {
     width: 38.09524%;
     background-size: auto, 38.09524% auto;
     background-position: left top; }
+    .fixedheader-on #header {
+      background-size: center auto; }
   #footer {
     width: 38.09524%;
     padding: 4.21529em;

@@ -147,7 +147,7 @@
 	            position: fixed;
     		    background-attachment: scroll;
 		        background-size: auto, cover;
-	            background-position: top left, top center;
+	            background-position: center top;
 	        }
 
 	        br {
@@ -210,6 +210,10 @@
 		    width: 100% - 100% / $calcratio;
 		    background-size: auto, (100% - 100% / $calcratio) auto;
 	        background-position: left top;
+	        
+	        .fixedheader-on & {
+		        background-size: center auto;
+	        }
 
 	    }
 

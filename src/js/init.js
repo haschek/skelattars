@@ -274,21 +274,26 @@
 
             // Fixed Header
             
-            var headeritem = $('#header > *:last-child');
-            var footer = $('#footer');
-            
-            $(window).on('load resize', function() {
-                var vert_min = headeritem.position().top + headeritem.outerHeight();
-                var vert_max = $(window).height() - footer.outerHeight();
+                var headeritem = $('#header > *:last-child');
+                var footer = $('#footer');
+                
+                $window.on('resize', function() {
+                    var vert_min = headeritem.position().top + headeritem.outerHeight();
+                    var vert_max = $(window).height() - footer.outerHeight();
 
-                if (vert_min < vert_max) {
-                    $body.addClass('fixedheader-on');
-                }
-                else {
-                    $body.removeClass('fixedheader-on');
-                }
-            });
-            
+                    if (vert_min < vert_max) {
+                        $body.addClass('fixedheader-on');
+                    }
+                    else {
+                        $body.removeClass('fixedheader-on');
+                    }
+                    
+                    $header.css('background-position', '');
+
+                    // $window.trigger('scroll.strata_parallax');
+                    
+                });
+                $window.trigger('resize');
                 
             // Parallax background.
 
@@ -301,16 +306,18 @@
 
                     skel.change(function() {
                     
+                        $window.trigger('resize');
+
                         if (!skel.isActive('medium')) {
                             $window.off('scroll.strata_parallax');
                             $body.removeClass('parallax-on');
                         }
                         else {
-                            $header.css('background-position', '');
-                            var bgposleft = $header.css('background-position').split(' ', 1).toString();
                             $body.addClass('parallax-on');
                             
                             $window.on('scroll.strata_parallax', function() {
+                                $header.css('background-position', '');
+                                var bgposleft = $header.css('background-position').split(' ', 1).toString();
                                 $header.css(
                                     'background-position',
                                     bgposleft + ' ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px'
@@ -318,7 +325,6 @@
                             });
                             
                             // $window.trigger('scroll.strata_parallax');
-
                         }
 
                     });

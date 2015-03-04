@@ -8,7 +8,7 @@
 	    background-attachment:	scroll;
 	    background-color:		$color-accent2-bg;
 	    background-image:		url('images/overlay.png'),		url($header-bg);
-	    background-position:	top left,						center;
+	    background-position:	center center;
 	    background-repeat:		repeat,							no-repeat;
 	    background-size:		auto,							cover;
 	
@@ -45,7 +45,7 @@
 	    background-attachment:	scroll;
 	    background-color:		$color-accent2-bg;
 	    background-image:		url('images/overlay.png'),		url($header-bg);
-	    background-position:	top left,						bottom center;
+	    background-position:	center bottom;
 	    background-repeat:		repeat,							no-repeat;
 	    background-size:		auto,							cover;
 
@@ -126,16 +126,29 @@
 
     /* Header */
     
+        body {
+            position: relative;
+        }
+    
 	    #header {
 		    height: 100%;
 		    left: 0;
 		    padding: $size-element-margin * $calcratio;
 		    padding-top: $size-element-margin * $calcratio * $calcratio;
-		    position: fixed;
+		    position: absolute;
 		    text-align: right;
 		    top: 0;
 		    width: (100% - 100% / $calcratio) / $calcratio;
-		    background-attachment: scroll;
+		    background-attachment: scroll, fixed;
+		    background-size: auto, 2 * (100% - 100% / $calcratio) / $calcratio auto;
+	        background-position: -25% 0;
+	        
+	        .fixedheader-on & {
+	            position: fixed;
+    		    background-attachment: scroll;
+		        background-size: auto, cover;
+	            background-position: top left, top center;
+	        }
 
 	        br {
 		        display: inherit;
@@ -146,7 +159,7 @@
 
 	    #footer {
 	        background: transparent;
-		    position: fixed;
+		    position: absolute; // fixed;
 		    bottom: 0;
 		    left: 0;
 		    width: (100% - 100% / $calcratio) / $calcratio;
@@ -155,6 +168,10 @@
 		    padding-left: $size-element-margin * 0.5;
 		    text-align: right;
 		
+	        .fixedheader-on & {
+	            position: fixed;
+	        }
+
 		    .copyright {
 			
 			    li {
@@ -191,6 +208,9 @@
 		    padding: $size-element-margin * $calcratio * $calcratio;
 		    padding-top: $size-element-margin * $calcratio * $calcratio * $calcratio;
 		    width: 100% - 100% / $calcratio;
+		    background-size: auto, (100% - 100% / $calcratio) auto;
+	        background-position: left top;
+
 	    }
 
     /* Footer */

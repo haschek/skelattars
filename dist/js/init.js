@@ -272,6 +272,24 @@
 
         // Header.
 
+            // Fixed Header
+            
+            var headeritem = $('#header > *:last-child');
+            var footer = $('#footer');
+            
+            $(window).on('load resize', function() {
+                var vert_min = headeritem.position().top + headeritem.outerHeight();
+                var vert_max = $(window).height() - footer.outerHeight();
+
+                if (vert_min < vert_max) {
+                    $body.addClass('fixedheader-on');
+                }
+                else {
+                    $body.removeClass('fixedheader-on');
+                }
+            });
+            
+                
             // Parallax background.
 
                 // Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
@@ -282,23 +300,24 @@
                 if (settings.parallax) {
 
                     skel.change(function() {
-
-                        if (skel.isActive('medium')) {
-
+                    
+                        if (!skel.isActive('medium')) {
                             $window.off('scroll.strata_parallax');
-                            $header.css('background-position', 'top left, center center');
-
+                            $body.removeClass('parallax-on');
                         }
                         else {
-
-                            $header.css('background-position', 'left 0px');
-
+                            $header.css('background-position', '');
+                            var bgposleft = $header.css('background-position').split(' ', 1).toString();
+                            $body.addClass('parallax-on');
+                            
                             $window.on('scroll.strata_parallax', function() {
                                 $header.css(
                                     'background-position',
-                                    'left ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px'
+                                    bgposleft + ' ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px'
                                 );
                             });
+                            
+                            // $window.trigger('scroll.strata_parallax');
 
                         }
 

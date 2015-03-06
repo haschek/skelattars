@@ -381,7 +381,7 @@ dl {
   color: rgba(255, 255, 255, 0.75);
   background-attachment: scroll;
   background-color: #082d3b;
-  background-image: url('images/overlay.png'), url('../images/bg.jpg');
+  background-image: url('images/overlay.png'), url('../images/bg.png');
   background-position: center center;
   background-repeat: repeat, no-repeat;
   background-size: auto, cover; }
@@ -413,7 +413,7 @@ dl {
   color: rgba(255, 255, 255, 0.75);
   background-attachment: scroll;
   background-color: #082d3b;
-  background-image: url('images/overlay.png'), url('../images/bg.jpg');
+  background-image: url('images/overlay.png'), url('../images/bg.png');
   background-position: center bottom;
   background-repeat: repeat, no-repeat;
   background-size: auto, cover; }

@@ -199,12 +199,12 @@ header.major h1, header.major h2 {
     display: none; }
 
 /* Image */
-.image {
+.image, .avatar {
   border-radius: 3px;
   border: 0;
   display: inline-block;
   position: relative; }
-  .image:before {
+  .image:before, .avatar:before {
     -moz-transition: opacity 0.25s ease-in-out;
     -webkit-transition: opacity 0.25s ease-in-out;
     -o-transition: opacity 0.25s ease-in-out;
@@ -220,9 +220,9 @@ header.major h1, header.major h2 {
     position: absolute;
     top: 0;
     width: 100%; }
-  .image.thumb {
+  .image.thumb, .avatar.thumb {
     text-align: center; }
-    .image.thumb:after {
+    .image.thumb:after, .avatar.thumb:after {
       -moz-transition: opacity 0.25s ease-in-out;
       -webkit-transition: opacity 0.25s ease-in-out;
       -o-transition: opacity 0.25s ease-in-out;
@@ -245,38 +245,31 @@ header.major h1, header.major h2 {
       text-decoration: none;
       top: 50%;
       white-space: nowrap; }
-    .image.thumb:hover:after {
+    .image.thumb:hover:after, .avatar.thumb:hover:after {
       opacity: 1; }
-    .image.thumb:hover:before {
+    .image.thumb:hover:before, .avatar.thumb:hover:before {
       background: url('images/overlay.png'), url('images/overlay.png');
       opacity: 1; }
-  .image img {
+  .image img, .avatar img {
     border-radius: 3px;
     display: block; }
-  .image.left {
+  .image.left, .avatar.left {
     float: left;
     margin: 0 1.61538em 0.80769em 0;
     top: 0.40385em; }
-  .image.right {
+  .image.right, .avatar.right {
     float: right;
     margin: 0 0 0.80769em 1.61538em;
     top: 0.40385em; }
-  .image.left, .image.right {
+  .image.left, .image.right, .avatar.left, .avatar.right {
     max-width: 50%; }
-    .image.left img, .image.right img {
+    .image.left img, .image.right img, .avatar.left img, .avatar.right img {
       width: 100%; }
-  .image.fit {
+  .image.fit, .avatar.fit {
     display: block;
     margin: 0 0 1.61538em 0;
     width: 100%; }
-    .image.fit img {
-      width: 100%; }
-  .image.avatar {
-    border-radius: 100%; }
-    .image.avatar:before {
-      display: none; }
-    .image.avatar img {
-      border-radius: 100%;
+    .image.fit img, .avatar.fit img {
       width: 100%; }
 
 /* List */
@@ -399,10 +392,17 @@ dl {
     font-size: 1.25em;
     line-height: 1.61538;
     margin: 0; }
-  #header .image.avatar {
-    margin: 0 0 1.61538em 0;
+  #header .avatar {
     font-size: 1em;
-    width: 6.80932em; }
+    width: 6.80932em;
+    background-color: rgba(195, 214, 221, 0.5);
+    border-radius: 100%;
+    margin: 0 0 1.61538em 0; }
+    #header .avatar:before {
+      display: none; }
+    #header .avatar img {
+      border-radius: 100%;
+      width: 100%; }
   #header br {
     display: none; }
 

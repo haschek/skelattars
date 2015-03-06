@@ -251,7 +251,7 @@
 
 /* Image */
 
-	.image {
+	.image, .avatar {
 		border-radius: $size-border-radius;
 		border: 0;
 		display: inline-block;
@@ -343,18 +343,6 @@
 			}
 		}
 		
-		&.avatar {
-			border-radius: 100%;
-			
-			&:before {
-				display: none;
-			}
-			
-			img {
-				border-radius: 100%;
-				width: 100%;
-			}
-		}
 	}
 
 /* List */

@@ -589,19 +589,19 @@ input[type="text"], input[type="password"], input[type="email"], select, textare
     color: #ddd;
     content: '\f078';
     display: block;
-    height: 2.75em;
-    line-height: 2.75em;
+    height: 2.60947em;
+    line-height: 2.60947em;
     pointer-events: none;
     position: absolute;
     right: 0;
     text-align: center;
     top: 0;
-    width: 2.75em; }
+    width: 2.60947em; }
   .select-wrapper select::-ms-expand {
     display: none; }
 
 input[type="text"], input[type="password"], input[type="email"], select {
-  height: 2.75em; }
+  height: 2.60947em; }
 
 textarea {
   padding: 0.75em; }
@@ -625,7 +625,7 @@ input[type="checkbox"], input[type="radio"] {
     display: inline-block;
     font-size: 1em;
     font-weight: 400;
-    padding-left: 2.4em;
+    padding-left: 2.10414em;
     padding-right: 0.75em;
     position: relative; }
     input[type="checkbox"] + label:before, input[type="radio"] + label:before {
@@ -641,13 +641,13 @@ input[type="checkbox"], input[type="radio"] {
       border: solid 2px transparent;
       content: '';
       display: inline-block;
-      height: 1.65em;
+      height: 1.56568em;
       left: 0;
-      line-height: 1.58125em;
+      line-height: 1.50044em;
       position: absolute;
       text-align: center;
       top: 0;
-      width: 1.65em; }
+      width: 1.56568em; }
   input[type="checkbox"]:checked + label:before, input[type="radio"]:checked + label:before {
     background: #555;
     border-color: #555;

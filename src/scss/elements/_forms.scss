@@ -89,7 +89,7 @@
 			display: inline-block;
 			font-size: 1em;
 			font-weight: $font-weight;
-			padding-left: ($size-element-height * 0.6) + 0.75em;
+			padding-left: ($size-element-height * 0.6) + $size-element-margin/3;
 			padding-right: 0.75em;
 			position: relative;
 			

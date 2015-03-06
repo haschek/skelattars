@@ -14,8 +14,8 @@ input[type="text"], input[type="password"], input[type="email"], select, textare
   -ms-behavior: url('css/ie/PIE.htc'); }
 
 input[type="text"], input[type="password"], input[type="email"], select {
-  height: 2.75em;
-  line-height: 2.75em; }
+  height: 2.60947em;
+  line-height: 2.60947em; }
 
 input[type="checkbox"] + label:before, input[type="radio"] + label:before {
   display: none; }

@@ -5,11 +5,6 @@
 // Duration.
     $duration-transition:       0.25s;
 
-// Size.
-    $size-border-radius:        3px;
-    $size-element-height:       2.75em;
-    // $size-element-margin:       2em;
-
 // Typography.
     $font-family:               'Source Sans Pro', sans-serif;
     $font-family-fixed:         'Source Code Pro', monospace;
@@ -53,6 +48,11 @@
 // Header Image.
     $header-bg:                 '../images/bg.png';
 
+// Size.
+    $size-border-radius:        3px;
+    $size-element-margin:       1em * $lineheight-normal !default; // 2em;
+    $size-element-height:       $size-element-margin * $lineheight-normal !default; // 2.75em;
+
 // Breakpoints
     $breakpoint-xlarge:         1801px;
     $breakpoint-large:          1281px;
@@ -63,7 +63,7 @@
 
 // Calculations -- don't change it
 
-    $size-element-margin: 1em * $lineheight-normal !default;
+    // $size-element-margin: 1em * $lineheight-normal !default;
     
     $fontsize-h1: $fontsize-title !default;
     $fontsize-h2: ($fontsize-title + $fontsize-normal) / 2 !default;

@@ -19,22 +19,21 @@
 
 // Color.
     $color-bg:                  #fff;
-    $color-fg:                  #333;
-    $color-fg-bold:             #555;
-    $color-fg-light:            #666;
-    $color-border:              #eee;
-    $color-border-bg:           #f6f6f6;
-    $color-border2:             #ddd;
-    $color-border2-bg:          #e6e6e6;
+    $color-fg:                  #444;
+    $color-fg-bold:             strongen($color-fg, 13.5%);
+    $color-fg-light:            weaken($color-fg, 13.5%);
+    $color-border:              weaken($color-bg, percentage(17/256)); // #eee;
+    $color-border-bg:           weaken($color-bg, percentage(9/256)); // #f6f6f6;
+    $color-border2:             weaken($color-bg, percentage(34/256)); // #ddd;
+    $color-border2-bg:          weaken($color-bg, percentage(25/256)); // #e6e6e6;
 
     $color-accent-bg:           #115c77;
-    $color-accent-fg:           rgba(#ffffff, 0.25);
-    $color-accent-fg-bold:      #ffffff;
+    $color-accent-fg:           weaken($color-accent-bg, 100%);
     
     $color-accent2-bg:          #082d3b;
-    $color-accent2-fg:          rgba(255,255,255,0.75);
-    $color-accent2-fg-bold:     #ffffff;
-    $color-accent2-fg-light:    rgba(255,255,255,0.5);
+    $color-accent2-fg-bold:     weaken($color-accent2-bg, 100%);
+    $color-accent2-fg:          rgba($color-accent2-fg-bold, 0.75);
+    $color-accent2-fg-light:    rgba($color-accent2-fg-bold, 0.50);
 
 // Header Image.
     $header-bg:                 '../images/bg.png';

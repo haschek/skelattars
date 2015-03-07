@@ -5,4 +5,4 @@ input[type=checkbox]+label:before,input[type=radio]+label:before{display:none}
 .image:after,.image:before{display:none!important}
 .image img{position:relative;-ms-behavior:url(css/ie/PIE.htc)}
 #header{background-image:url(../../images/bg.jpg);background-repeat:no-repeat;background-size:cover;-ms-behavior:url(css/ie/backgroundsize.min.htc)}
-#footer .icons a,#header h1{color:#fff}
+#footer .icons a,#header h1{color:weaken(#082d3b,100%)}

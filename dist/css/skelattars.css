@@ -22,7 +22,7 @@ body {
     transition: none !important; }
 
 body, input, select, textarea {
-  color: #333;
+  color: #444;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1em;
   font-weight: 400;
@@ -46,7 +46,7 @@ a {
     text-decoration: none; }
 
 strong, b {
-  color: #555;
+  color: #222222;
   font-weight: 700; }
 
 em, i {
@@ -56,7 +56,7 @@ p {
   margin: 0 0 1.61538em 0; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #555;
+  color: #222222;
   font-weight: 700;
   line-height: 1.61538;
   margin: 0 0 0.80769em 0; }
@@ -102,11 +102,11 @@ sup {
 
 hr {
   border: 0;
-  border-bottom: solid 2px #eee;
+  border-bottom: solid 2px #eeeeee;
   margin: 1.61538em 0 2.60947em 0; }
 
 blockquote {
-  border-left: solid 6px #eee;
+  border-left: solid 6px #eeeeee;
   font-style: italic;
   margin: 0 0 1.61538em 0;
   padding: 0.5em 0 0.5em 1.5em; }
@@ -114,7 +114,7 @@ blockquote {
 code {
   background: #f6f6f6;
   border-radius: 3px;
-  border: solid 2px #eee;
+  border: solid 2px #eeeeee;
   font-family: 'Source Code Pro', monospace;
   font-size: 0.8em;
   margin: 0 0.25em;
@@ -146,14 +146,14 @@ pre {
 
 .subline {
   font-size: 0.8em;
-  color: #666; }
+  color: #666666; }
 
 /* Section/Article */
 section.special, article.special {
   text-align: center; }
 
 header p {
-  color: #666;
+  color: #666666;
   position: relative; }
 header h1 + p, header h2 + p {
   font-size: 1.25em;
@@ -173,7 +173,7 @@ header.major h1, header.major h2 {
 /* Box */
 .box {
   border-radius: 3px;
-  border: solid 2px #eee;
+  border: solid 2px #eeeeee;
   margin-bottom: 1.61538em;
   padding: 1.5em; }
   .box > :last-child, .box > :last-child > :last-child, .box > :last-child > :last-child > :last-child {
@@ -290,7 +290,7 @@ ul {
     list-style: none;
     padding-left: 0; }
     ul.alt li {
-      border-top: solid 2px #eee;
+      border-top: solid 2px #eeeeee;
       padding: 0.5em 0; }
       ul.alt li:first-child {
         border-top: 0;
@@ -321,7 +321,7 @@ ul {
       ul.labeled-icons li a {
         color: inherit; }
       ul.labeled-icons li h3 {
-        color: #666;
+        color: #666666;
         left: 0;
         position: absolute;
         text-align: center;
@@ -386,7 +386,7 @@ dl {
   background-repeat: repeat, no-repeat;
   background-size: auto, cover; }
   #header strong, #header b {
-    color: #ffffff; }
+    color: white; }
   #header > * {
     color: rgba(255, 255, 255, 0.75);
     font-size: 1.25em;
@@ -548,7 +548,7 @@ form {
   margin: 0 0 1.61538em 0; }
 
 label {
-  color: #555;
+  color: #222222;
   display: block;
   font-size: 0.9em;
   font-weight: 700;
@@ -586,7 +586,7 @@ input[type="text"], input[type="password"], input[type="email"], select, textare
     font-weight: normal;
     text-transform: none !important; }
   .select-wrapper:before {
-    color: #ddd;
+    color: #dddddd;
     content: '\f078';
     display: block;
     height: 2.60947em;
@@ -620,7 +620,7 @@ input[type="checkbox"], input[type="radio"] {
   z-index: -1; }
   input[type="checkbox"] + label, input[type="radio"] + label {
     text-decoration: none;
-    color: #333;
+    color: #444;
     cursor: pointer;
     display: inline-block;
     font-size: 1em;
@@ -649,8 +649,8 @@ input[type="checkbox"], input[type="radio"] {
       top: 0;
       width: 1.56568em; }
   input[type="checkbox"]:checked + label:before, input[type="radio"]:checked + label:before {
-    background: #555;
-    border-color: #555;
+    background: #222222;
+    border-color: #222222;
     color: #fff;
     content: '\f00c'; }
   input[type="checkbox"]:focus + label:before, input[type="radio"]:focus + label:before {
@@ -663,23 +663,23 @@ input[type="radio"] + label:before {
   border-radius: 100%; }
 
 ::-webkit-input-placeholder {
-  color: #666 !important;
+  color: #666666 !important;
   opacity: 1; }
 
 :-moz-placeholder {
-  color: #666 !important;
+  color: #666666 !important;
   opacity: 1; }
 
 ::-moz-placeholder {
-  color: #666 !important;
+  color: #666666 !important;
   opacity: 1; }
 
 :-ms-input-placeholder {
-  color: #666 !important;
+  color: #666666 !important;
   opacity: 1; }
 
 .formerize-placeholder {
-  color: #666 !important;
+  color: #666666 !important;
   opacity: 1; }
 
 /* Table */
@@ -691,7 +691,7 @@ table {
   margin: 0 0 1.61538em 0;
   width: 100%; }
   table tbody tr {
-    border: solid 1px #eee;
+    border: solid 1px #eeeeee;
     border-left: 0;
     border-right: 0; }
     table tbody tr:nth-child(2n+1) {
@@ -699,19 +699,19 @@ table {
   table td {
     padding: 0.75em 0.75em; }
   table th {
-    color: #555;
+    color: #222222;
     font-size: 0.9em;
     font-weight: 700;
     padding: 0 0.75em 0.75em 0.75em;
     text-align: left; }
   table thead {
-    border-bottom: solid 2px #eee; }
+    border-bottom: solid 2px #eeeeee; }
   table tfoot {
-    border-top: solid 2px #eee; }
+    border-top: solid 2px #eeeeee; }
   table.alt {
     border-collapse: separate; }
     table.alt tbody tr td {
-      border: solid 2px #eee;
+      border: solid 2px #eeeeee;
       border-left-width: 0;
       border-top-width: 0; }
       table.alt tbody tr td:first-child {
@@ -737,8 +737,8 @@ input[type="submit"], input[type="reset"], input[type="button"], .button {
   transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   background-color: transparent;
   border-radius: 3px;
-  border: solid 3px #eee;
-  color: #555;
+  border: solid 3px #eeeeee;
+  color: #222222;
   cursor: pointer;
   display: inline-block;
   font-weight: 700;
@@ -773,7 +773,7 @@ input[type="submit"], input[type="reset"], input[type="button"], .button {
   input[type="submit"].special, input[type="reset"].special, input[type="button"].special, .button.special {
     background-color: #115c77;
     border-color: #115c77;
-    color: #ffffff; }
+    color: white; }
     input[type="submit"].special:focus, input[type="submit"].special:hover, input[type="reset"].special:focus, input[type="reset"].special:hover, input[type="button"].special:focus, input[type="button"].special:hover, .button.special:focus, .button.special:hover {
       border-color: #115c77;
       background-color: transparent;
@@ -785,7 +785,7 @@ input[type="submit"], input[type="reset"], input[type="button"], .button {
   input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"].disabled, input[type="reset"]:disabled, input[type="button"].disabled, input[type="button"]:disabled, .button.disabled, .button:disabled {
     background-color: #e6e6e6 !important;
     border-color: #e6e6e6 !important;
-    color: #666 !important;
+    color: #666666 !important;
     opacity: 0.5 !important;
     cursor: default !important; }
 
@@ -915,7 +915,7 @@ ul.actions, ol.actions {
       text-transform: none !important; }
     .poptrox-popup .nav-next:before, .poptrox-popup .nav-previous:before {
       color: #fff;
-      text-shadow: 0 0 1px #333;
+      text-shadow: 0 0 1px #444;
       font-size: 2.5em;
       height: 1em;
       line-height: 1em;
@@ -978,8 +978,8 @@ ul.actions, ol.actions {
       top: 50%;
       width: 1.75em;
       color: #fff;
-      text-shadow: 0 0 1px #333;
-      box-shadow: 0 0 1px #333; }
+      text-shadow: 0 0 1px #444;
+      box-shadow: 0 0 1px #444; }
   .poptrox-popup:hover .nav-next, .poptrox-popup:hover .nav-previous {
     opacity: 0.5; }
     .poptrox-popup:hover .nav-next:hover, .poptrox-popup:hover .nav-previous:hover {

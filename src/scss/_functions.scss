@@ -1,0 +1,23 @@
+@function weaken($color, $percent) {
+    @if lightness($color) < 50% {
+        @return lighten($color, $percent);
+    }
+    @else {
+        @return darken($color, $percent);
+    }
+    
+    @return $color;
+}
+
+@function strongen($color, $percent) {
+    @if lightness($color) < 50% {
+        @return darken($color, $percent);
+    }
+    @else {
+        @return lighten($color, $percent);
+    }
+    
+    @return $color;
+}
+
+

@@ -37,8 +37,8 @@ input[type="checkbox"] + label:before, input[type="radio"] + label:before {
   background-size: cover;
   -ms-behavior: url('css/ie/backgroundsize.min.htc'); }
   #header h1 {
-    color: #ffffff; }
+    color: weaken(#082d3b, 100%); }
 
 /* Footer */
 #footer .icons a {
-  color: #ffffff; }
+  color: weaken(#082d3b, 100%); }

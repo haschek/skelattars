@@ -7,15 +7,17 @@ module.exports = {
     deps: ['javascript'],
     work: function() {
         return gulp.src([
-                './dist/js/**/!(*.min.*).js' // @see https://github.com/isaacs/node-glob#glob-primer
+                './dist/js/**/!(*'+config.minsuffix+'.*).js' // @see https://github.com/isaacs/node-glob#glob-primer
             ])
             .pipe(
-                minifyJS()
+                minifyJS(
+                    config.minifyjs
+                )
             )
             .pipe(
                 rename({
                     // @see https://github.com/hparra/gulp-rename#usage
-                    suffix: ".min"
+                    suffix: config.minsuffix
                 })
             )
             .pipe(

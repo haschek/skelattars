@@ -1,3 +1,8 @@
+/*!
+    Skelattars Template, forked from Strata by HTML5 UP.
+    Free for personal and commercial use under the CC-BY 3.0 license.
+    @see https://github.com/haschek/skelattars
+*/
 html{font-size:1em}
 body{background:#fff}
 body.is-loading *,body.is-loading :after,body.is-loading :before{-moz-animation:none!important;-webkit-animation:none!important;-o-animation:none!important;-ms-animation:none!important;animation:none!important;-moz-transition:none!important;-webkit-transition:none!important;-o-transition:none!important;-ms-transition:none!important;transition:none!important}

@@ -1,4 +1,4 @@
-/*
+/*!
     Skelattars Template, forked from Strata by HTML5 UP.
     Free for personal and commercial use under the CC-BY 3.0 license.
     @see https://github.com/haschek/skelattars
@@ -8,14 +8,14 @@
 
     var settings = {
 
-        // Parallax background effect?
-            parallax: true,
-
-        // Parallax factor (lower = more intense, higher = less intense).
+        // Parallax factor (0 = off, lower = more intense, higher = less intense).
             parallaxFactor: 20,
         
-        // Flyin Navigation
-            flyinnav: true
+        // Flyin Navigation (true = on, false = off)
+            flyinnav: true,
+        
+        // Fixed Header (true = on, false = off)
+            fixedheader: true
 
     };
 
@@ -56,6 +56,134 @@
                     }, 0);
 
             }
+
+        // Flyin Navigation
+        
+            if (settings.flyinnav) {
+                
+                $body.addClass('flyinnav-on');
+                
+                $('nav').each(
+                    function() {
+                        var nav = $(this);
+                        
+                        if (!nav.hasClass('flyinnav-off')) {
+                        
+                            nav.addClass('flyinnav-on');
+                            
+                            var close = $('<button class="button icon fa-close"><span class="label">Close</span></button>');
+                            var open = $('<button class="button icon fa-bars flyinnav-open"><span class="label">Menu</span></button>');
+                            var links = nav.find('a');
+                            
+                            open.on(
+                                'click',
+                                function() {
+                                    nav.addClass('flyinnav-active');
+                                }
+                            );
+
+                            close.on(
+                                'click',
+                                function() {
+                                    nav.removeClass('flyinnav-active');
+                                }
+                            );
+                            
+                            links.on(
+                                'click',
+                                function() {
+                                    nav.removeClass('flyinnav-active');
+                                }
+                            );
+                            
+                            nav.append(close);
+                            nav.before(open);
+                        }
+                    }
+                );
+            }
+
+        // Fixed Header
+        
+            if (settings.fixedheader) {
+                
+                var headeritem;
+                if (!$body.hasClass('flyinnav-on')) {
+                    headeritem = $('#header > *:last-child');
+                    console.log('flyoff');
+                    console.log(headeritem);
+                }
+                else {
+                    headeritem = $('#header > *').not('nav').last();
+                    console.log('flyon');
+                    console.log(headeritem);
+                }
+                var footer = $('#footer');
+                
+                $window.on('resize', function() {
+                    var vert_min = headeritem.position().top + headeritem.outerHeight();
+                    var vert_max = $(window).height() - footer.outerHeight();
+                    //console.log(vert_min + ' < ' + vert_max);
+                    if (vert_min < vert_max) {
+                        $body.addClass('fixedheader-on');
+                    }
+                    else {
+                        $body.removeClass('fixedheader-on');
+                    }
+                    
+                });
+                $window.trigger('resize');
+            }
+                
+        // Parallax background.
+
+            // Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
+            if (skel.vars.browser === 'ie' || skel.vars.isMobile) {
+                settings.parallaxFactor = 0;
+            }
+
+            if (settings.parallaxFactor > 0) {
+
+                skel.change(function() {
+                    $header.css('background-position', '');
+                    $window.trigger('resize');
+
+                    if (!skel.isActive('medium')) {
+                        $window.off('scroll.strata_parallax');
+                        $body.removeClass('parallax-on');
+                    }
+                    else {
+                        $body.addClass('parallax-on');
+                        
+                        $window.on('scroll.strata_parallax', function() {
+                            $header.css('background-position', '');
+                            var bgposleft = $header.css('background-position').split(' ', 1).toString();
+                            $header.css(
+                                'background-position',
+                                bgposleft + ' ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px'
+                            );
+                        });
+                    }
+
+                });
+
+            }
+
+        // Lightbox.
+
+            $('#main').poptrox({
+                caption: function($a) { return $a.siblings('.caption').text() || $a.next().text(); },
+                // overlayColor: '#2c2c2c',
+                // overlayOpacity: 0.85,
+                popupCloserText: '',
+                popupLoaderText: '',
+                selector: '.work-item a',
+                usePopupCaption: true,
+                usePopupDefaultStyling: false,
+                usePopupEasyClose: false,
+                usePopupNav: true,
+                windowMargin: (!skel.isActive('medium') ? 0 : 50)
+            });
 
         // Forms (IE<10).
 
@@ -152,6 +280,7 @@
                                 }
                                 
                                 e.blur(
+
                                     function(event) {
                                         event.preventDefault();
                                         var e = $(this);
@@ -272,134 +401,6 @@
                 }
 
             }
-
-        // Flyin Navigation
-        
-            if (settings.flyinnav) {
-                
-                $body.addClass('flyinnav-on');
-                
-                $('nav').each(
-                    function() {
-                        var nav = $(this);
-                        
-                        if (!nav.hasClass('flyinnav-off')) {
-                        
-                            nav.addClass('flyinnav-on');
-                            
-                            var close = $('<button class="button icon fa-close"><span class="label">Close</span></button>');
-                            var open = $('<button class="button icon fa-bars flyinnav-open"><span class="label">Menu</span></button>');
-                            var links = nav.find('a');
-                            
-                            open.on(
-                                'click',
-                                function() {
-                                    nav.addClass('flyinnav-active');
-                                }
-                            );
-
-                            close.on(
-                                'click',
-                                function() {
-                                    nav.removeClass('flyinnav-active');
-                                }
-                            );
-                            
-                            links.on(
-                                'click',
-                                function() {
-                                    nav.removeClass('flyinnav-active');
-                                }
-                            );
-                            
-                            nav.append(close);
-                            nav.before(open);
-                        }
-                    }
-                );
-            }
-
-        // Header.
-
-            // Fixed Header
-            
-                var headeritem;
-                if (!$body.hasClass('flyinnav-on')) {
-                    headeritem = $('#header > *:last-child');
-                    console.log('flyoff');
-                    console.log(headeritem);
-                }
-                else {
-                    headeritem = $('#header > *').not('nav').last();
-                    console.log('flyon');
-                    console.log(headeritem);
-                }
-                var footer = $('#footer');
-                
-                $window.on('resize', function() {
-                    var vert_min = headeritem.position().top + headeritem.outerHeight();
-                    var vert_max = $(window).height() - footer.outerHeight();
-                    //console.log(vert_min + ' < ' + vert_max);
-                    if (vert_min < vert_max) {
-                        $body.addClass('fixedheader-on');
-                    }
-                    else {
-                        $body.removeClass('fixedheader-on');
-                    }
-                    
-                });
-                $window.trigger('resize');
-                
-            // Parallax background.
-
-                // Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
-                if (skel.vars.browser === 'ie' || skel.vars.isMobile) {
-                    settings.parallax = false;
-                }
-
-                if (settings.parallax) {
-
-                    skel.change(function() {
-                        $header.css('background-position', '');
-                        $window.trigger('resize');
-
-                        if (!skel.isActive('medium')) {
-                            $window.off('scroll.strata_parallax');
-                            $body.removeClass('parallax-on');
-                        }
-                        else {
-                            $body.addClass('parallax-on');
-                            
-                            $window.on('scroll.strata_parallax', function() {
-                                $header.css('background-position', '');
-                                var bgposleft = $header.css('background-position').split(' ', 1).toString();
-                                $header.css(
-                                    'background-position',
-                                    bgposleft + ' ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px'
-                                );
-                            });
-                        }
-
-                    });
-
-                }
-
-        // Main Sections: Two.
-
-            // Lightbox gallery.
-                $('#two').poptrox({
-                    caption: function($a) { return $a.siblings('.caption').text() || $a.next().text(); },
-                    // overlayColor: '#2c2c2c',
-                    // overlayOpacity: 0.85,
-                    popupCloserText: '',
-                    popupLoaderText: '',
-                    selector: '.work-item a',
-                    usePopupCaption: true,
-                    usePopupDefaultStyling: false,
-                    usePopupEasyClose: false,
-                    usePopupNav: true,
-                    windowMargin: (!skel.isActive('medium') ? 0 : 50)
-                });
 
     });
 

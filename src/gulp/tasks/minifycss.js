@@ -7,26 +7,17 @@ module.exports = {
     deps: ['sass'],
     work: function() {
         return gulp.src([
-                './dist/css/**/!(*.min.*).css' // @see https://github.com/isaacs/node-glob#glob-primer
+                './dist/css/**/!(*'+config.minsuffix+'.*).css' // @see https://github.com/isaacs/node-glob#glob-primer
             ])
             .pipe(
-                minifyCSS({
-                    debug: config.debug,
-                    keepBreaks: true,
-                    processImport: false,
-                    roundingPrecision: -1,
-                    keepSpecialComments: 1,
-                    //aggressiveMerging: false,
-                    //advanced: false,
-                    //noAggressiveMerging: true,
-                    //noAdvanced: true,
-                    shorthandCompacting: false
-                })
+                minifyCSS(
+                    config.minifycss
+                )
             )
             .pipe(
                 rename({
                     // @see https://github.com/hparra/gulp-rename#usage
-                    suffix: ".min"
+                    suffix: config.minsuffix
                 })
             )
             .pipe(

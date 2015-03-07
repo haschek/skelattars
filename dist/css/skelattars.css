@@ -395,7 +395,7 @@ dl {
   #header .avatar {
     font-size: 1em;
     width: 6.80932em;
-    background-color: rgba(195, 214, 221, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 100%;
     margin: 0 0 1.61538em 0; }
     #header .avatar:before {

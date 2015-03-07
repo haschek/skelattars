@@ -28,9 +28,9 @@
     $color-border2-bg:          #e6e6e6;
 
     $color-accent-bg:           #115c77;
-    $color-accent-fg:           mix($color-accent-bg, #ffffff, 25%);
+    $color-accent-fg:           rgba(#ffffff, 0.25);
     $color-accent-fg-bold:      #ffffff;
-    $color-accent-fg-light:     mix($color-accent-bg, #ffffff, 40%);
+    $color-accent-fg-light:     rgba(#ffffff, 0.40);
     $color-accent-border:       rgba(255,255,255,0.25);
     $color-accent-border-bg:    rgba(255,255,255,0.075);
     $color-accent-border2:      rgba(255,255,255,0.5);

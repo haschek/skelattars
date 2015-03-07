@@ -15,7 +15,12 @@ module.exports = {
                     keepBreaks: true,
                     processImport: false,
                     roundingPrecision: -1,
-                    keepSpecialComments: 1
+                    keepSpecialComments: 1,
+                    //aggressiveMerging: false,
+                    //advanced: false,
+                    //noAggressiveMerging: true,
+                    //noAdvanced: true,
+                    shorthandCompacting: false
                 })
             )
             .pipe(

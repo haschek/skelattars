@@ -1,64 +1,57 @@
 // Calculation Ratio
 
-    $calcratio:                 21/13; // appr. golden ratio
+    $calcratio:                 21/13 !default; // appr. golden ratio
 
 // Duration.
-    $duration-transition:       0.25s;
+    $duration-transition:       0.25s !default;
 
 // Typography.
-    $font-family:               'Source Sans Pro', sans-serif;
-    $font-family-fixed:         'Source Code Pro', monospace;
-    $font-weight:               400;
-    $font-weight-bold:          700;
+    $font-family:               'Source Sans Pro', sans-serif !default;
+    $font-family-fixed:         'Source Code Pro', monospace !default;
+    $font-weight:               400 !default;
+    $font-weight-bold:          700 !default;
     
-    $fontsize-normal:           1em;
-    $lineheight-normal:         $calcratio; // do not use a unit here!
-    $fontsize-narrowed:         0.8em;
-    $fontsize-elevated:         1.25em;
-    $fontsize-title:            $fontsize-normal * $calcratio * $calcratio;
+    $fontsize-normal:           1em !default;
+    $lineheight-normal:         $calcratio !default; // do not use a unit here!
+    $fontsize-narrowed:         0.8em !default;
+    $fontsize-elevated:         1.25em !default;
+    $fontsize-title:            $fontsize-normal * $calcratio * $calcratio !default;
 
-// Color.
-    $color-bg:                  #fff;
-    $color-fg:                  #444;
-    $color-fg-bold:             strongen($color-fg, 13.5%);
-    $color-fg-light:            weaken($color-fg, 13.5%);
-    $color-border:              weaken($color-bg, percentage(17/256)); // #eee;
-    $color-border-bg:           weaken($color-bg, percentage(9/256)); // #f6f6f6;
-    $color-border2:             weaken($color-bg, percentage(34/256)); // #ddd;
-    $color-border2-bg:          weaken($color-bg, percentage(25/256)); // #e6e6e6;
-
-    $color-accent-bg:           #115c77;
-    $color-accent-fg:           weaken($color-accent-bg, 100%);
-    
-    $color-accent2-bg:          #082d3b;
-    $color-accent2-fg-bold:     weaken($color-accent2-bg, 100%);
-    $color-accent2-fg:          rgba($color-accent2-fg-bold, 0.75);
-    $color-accent2-fg-light:    rgba($color-accent2-fg-bold, 0.50);
-
-// Header Image.
-    $header-bg:                 '../images/bg.png';
-
-// Size.
-    $size-border-radius:        3px;
-    $size-element-margin:       1em * $lineheight-normal !default; // 2em;
-    $size-element-height:       $size-element-margin * $lineheight-normal !default; // 2.75em;
-
-// Breakpoints
-    $breakpoint-xlarge:         1801px;
-    $breakpoint-large:          1281px;
-    $breakpoint-medium:         981px;
-    $breakpoint-small:          737px;
-    $breakpoint-xsmall:         481px;
-
-
-// Calculations -- don't change it
-
-    // $size-element-margin: 1em * $lineheight-normal !default;
-    
     $fontsize-h1: $fontsize-title !default;
     $fontsize-h2: ($fontsize-title + $fontsize-normal) / 2 !default;
     $fontsize-h3: ($fontsize-title + $fontsize-normal * 2) / 3 !default;
     $fontsize-h4: ($fontsize-title + $fontsize-normal * 3) / 4 !default;
 
+// Color.
+    $color-bg:                  #fff !default;
+    $color-fg:                  #444 !default;
+    $color-fg-bold:             strongen($color-fg, 13.5%) !default;
+    $color-fg-light:            weaken($color-fg, 13.5%) !default;
+    $color-border:              weaken($color-bg, percentage(17/256)) !default; // #eee;
+    $color-border-bg:           weaken($color-bg, percentage(9/256)) !default; // #f6f6f6;
+    $color-border2:             weaken($color-bg, percentage(34/256)) !default; // #ddd;
+    $color-border2-bg:          weaken($color-bg, percentage(25/256)) !default; // #e6e6e6;
 
+    $color-accent-bg:           #115c77 !default;
+    $color-accent-fg:           weaken($color-accent-bg, 100%) !default;
+    
+    $color-accent2-bg:          #082d3b !default;
+    $color-accent2-fg-bold:     weaken($color-accent2-bg, 100%) !default;
+    $color-accent2-fg:          rgba($color-accent2-fg-bold, 0.75) !default;
+    $color-accent2-fg-light:    rgba($color-accent2-fg-bold, 0.50) !default;
+
+// Header Image.
+    $header-bg:                 '../images/bg.png' !default;
+
+// Size.
+    $size-border-radius:        3px !default;
+    $size-element-margin:       1em * $lineheight-normal !default; // 2em;
+    $size-element-height:       $size-element-margin * $lineheight-normal !default; // 2.75em;
+
+// Breakpoints
+    $breakpoint-xlarge:         1801px !default;
+    $breakpoint-large:          1281px !default;
+    $breakpoint-medium:         981px !default;
+    $breakpoint-small:          737px !default;
+    $breakpoint-xsmall:         481px !default;
 

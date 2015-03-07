@@ -5,7 +5,7 @@ Skelattars, a responsive HTML5/CSS3 Template
 upon the [Strata Template by html5up][2] and its underlying [framework Skel][3].
 It is free for personal and commercial use under the [CC-BY 3.0 license][4].
 
-[1]: http://48augen.de/projects/skelattars.html
+[1]: http://eye48.com/go/skelattars
 [2]: http://html5up.net/strata
 [3]: http://getskel.com/
 [4]: http://creativecommons.org/licenses/by-sa/3.0/

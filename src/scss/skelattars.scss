@@ -4,9 +4,11 @@
     @see https://github.com/haschek/skelattars
 */
 
-@import 'mixins';
-@import 'functions';
-@import 'vars';
+@import 'branding';
+
+@import 'inc/mixins';
+@import 'inc/functions';
+@import 'inc/vars';
 
 @import 'elements/basics';
 @import 'elements/layout';

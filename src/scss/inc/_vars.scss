@@ -23,8 +23,13 @@
     $fontsize-h4: ($fontsize-title + $fontsize-normal * 3) / 4 !default;
 
 // Color.
-    $color-bg:                  #fff !default;
-    $color-fg:                  #444 !default;
+    $color-site:                #fff !default;
+    $color-text:                #444 !default;
+    $color-link:                #115c77 !default;
+    $color-header:              #082d3b !default;
+    
+    $color-bg:                  $color-site !default;
+    $color-fg:                  $color-text !default;
     $color-fg-bold:             strongen($color-fg, 13.5%) !default;
     $color-fg-light:            weaken($color-fg, 13.5%) !default;
     $color-border:              weaken($color-bg, percentage(17/256)) !default; // #eee;
@@ -32,10 +37,10 @@
     $color-border2:             weaken($color-bg, percentage(34/256)) !default; // #ddd;
     $color-border2-bg:          weaken($color-bg, percentage(25/256)) !default; // #e6e6e6;
 
-    $color-accent-bg:           #115c77 !default;
+    $color-accent-bg:           $color-link !default;
     $color-accent-fg:           weaken($color-accent-bg, 100%) !default;
     
-    $color-accent2-bg:          #082d3b !default;
+    $color-accent2-bg:          $color-header !default;
     $color-accent2-fg-bold:     weaken($color-accent2-bg, 100%) !default;
     $color-accent2-fg:          rgba($color-accent2-fg-bold, 0.75) !default;
     $color-accent2-fg-light:    rgba($color-accent2-fg-bold, 0.50) !default;

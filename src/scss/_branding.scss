@@ -1,0 +1,22 @@
+// Header Image
+
+    $header-bg:        '../images/bg.png';              // background image of header
+
+// Colors
+
+    $color-site:        #fff;                           // background color of site
+    $color-text:        #444;                           // text color
+    $color-link:        #115c77;                        // link and button color
+    $color-header:      #082d3b;                        // background color of header
+
+// Typography
+
+    $font-family:       'Source Sans Pro', sans-serif;
+    $font-family-fixed: 'Source Code Pro', monospace;
+    $fontsize-normal:   1em;
+    $lineheight-normal: 21/13;                          // do not use a unit here!
+    $fontsize-narrowed: 0.8em;                          // small font size
+    $fontsize-elevated: 1.25em;                         // large font size
+    $fontsize-title:    $fontsize-normal * $lineheight-normal * $lineheight-normal; // font size for 1. Headline
+
+

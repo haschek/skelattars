@@ -288,10 +288,6 @@
                         $body.removeClass('fixedheader-on');
                     }
                     
-                    //$header.css('background-position', '');
-
-                    // $window.trigger('scroll.strata_parallax');
-                    
                 });
                 $window.trigger('resize');
                 
@@ -323,8 +319,6 @@
                                     bgposleft + ' ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px'
                                 );
                             });
-                            
-                            // $window.trigger('scroll.strata_parallax');
                         }
 
                     });

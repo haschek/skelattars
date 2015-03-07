@@ -3,8 +3,8 @@ body{background:#fff}
 body.is-loading *,body.is-loading :after,body.is-loading :before{-moz-animation:none!important;-webkit-animation:none!important;-o-animation:none!important;-ms-animation:none!important;animation:none!important;-moz-transition:none!important;-webkit-transition:none!important;-o-transition:none!important;-ms-transition:none!important;transition:none!important}
 body,input,select,textarea{color:#444;font-family:'Source Sans Pro',sans-serif;font-size:1em;font-weight:400;line-height:1.61538}
 input,select,textarea{font-size:1em}
-a{-moz-transition:color .25s ease-in-out,border-color .25s ease-in-out;-webkit-transition:color .25s ease-in-out,border-color .25s ease-in-out;-o-transition:color .25s ease-in-out,border-color .25s ease-in-out;-ms-transition:color .25s ease-in-out,border-color .25s ease-in-out;transition:color .25s ease-in-out,border-color .25s ease-in-out;border-bottom:dotted 1px;color:#115c77;text-decoration:none}
-a:hover{border-bottom-color:transparent;color:#115c77!important;text-decoration:none}
+a{-moz-transition:color .25s ease-in-out,background-color .25s ease-in-out,border-color .25s ease-in-out;-webkit-transition:color .25s ease-in-out,background-color .25s ease-in-out,border-color .25s ease-in-out;-o-transition:color .25s ease-in-out,background-color .25s ease-in-out,border-color .25s ease-in-out;-ms-transition:color .25s ease-in-out,background-color .25s ease-in-out,border-color .25s ease-in-out;transition:color .25s ease-in-out,background-color .25s ease-in-out,border-color .25s ease-in-out;border-bottom:dotted 1px;color:#115c77;text-decoration:none}
+a:hover{border-bottom-color:transparent;color:#115c77;text-decoration:none}
 b,strong{color:#222;font-weight:700}
 em,i{font-style:italic}
 p{margin:0 0 1.61538em}
@@ -58,7 +58,7 @@ ol li{padding-left:.25em}
 ul{list-style:disc;margin:0 0 1.61538em;padding-left:1em}
 ul li{padding-left:.5em}
 ul.alt{list-style:none;padding-left:0}
-ul.alt li{border-top:solid 2px #eee;padding:.5em 0}
+ul.alt li{border-top:solid 2px #eee;padding:.40385em 0}
 ul.alt li:first-child{border-top:0;padding-top:0}
 ul.icons{cursor:default;list-style:none;padding-left:0}
 ul.icons li{display:inline-block;padding:0 1em 0 0}
@@ -82,17 +82,19 @@ ul.icons li .icon{font-size:inherit}}
 @media screen and (min-width:1801px){html{font-size:1.25em}}
 #header{padding:1.61538em;text-align:center;color:rgba(255,255,255,.75);background:url(../images/bg.png) center center/cover no-repeat #082d3b}
 #header b,#header strong{color:#fff}
+#header a{color:rgba(255,255,255,.75)}
+#header a:active,#header a:focus,#header a:hover{color:#fff}
 #header>*{color:rgba(255,255,255,.75);font-size:1.25em;line-height:1.61538;margin:0}
 #header .avatar{font-size:1em;width:6.80932em;background-color:rgba(255,255,255,.5);border-radius:100%;margin:0 0 1.61538em}
 #header .avatar:before{display:none}
 #header .avatar img{border-radius:100%;width:100%}
 #header br{display:none}
-#footer{padding:1.61538em;text-align:center;color:rgba(255,255,255,.75);background:url(../images/bg.png) center bottom/cover no-repeat #082d3b}
+#footer{padding:1.61538em;text-align:center;color:rgba(255,255,255,.5);background:url(../images/bg.png) center bottom/cover no-repeat #082d3b}
 #footer .icons{margin:.80769em 0 0}
-#footer .icons a{color:rgba(255,255,255,.5)}
-#footer .copyright{color:rgba(255,255,255,.5);font-size:.8em;list-style:none;margin:.80769em 0 0;padding:0}
+#footer .copyright{font-size:.8em;list-style:none;margin:.80769em 0 0;padding:0}
 #footer .copyright li{display:block;margin-left:0;padding-left:0}
-#footer .copyright li a{color:inherit}
+#footer a{color:rgba(255,255,255,.5)}
+#footer a:active,#footer a:focus,#footer a:hover{color:#fff}
 #main{padding:1.61538em}
 @media screen and (min-width:481px){#footer,#header,#main{padding:2.60947em}}
 @media screen and (min-width:737px){#footer,#header,#main{padding:4.21529em}}
@@ -100,15 +102,26 @@ ul.icons li .icon{font-size:inherit}}
 #header{height:100%;left:0;padding:4.21529em 2.60947em 2.60947em;position:absolute;text-align:right;top:0;width:23.58277%;background-attachment:scroll,fixed;background-size:auto,47.16553% auto;background-position:-25% 0}
 .fixedheader-on #header{position:fixed;background-attachment:scroll;background-size:auto,cover;background-position:center top}
 #header br{display:inherit}
-#footer{background:0 0;position:absolute;bottom:0;left:0;width:23.58277%;padding:0 2.60947em 2.60947em .80769em;text-align:right}
+#footer{background:0 0;position:absolute;bottom:0;left:0;width:23.58277%;padding:1.61538em 2.60947em 2.60947em .80769em;text-align:right}
 .fixedheader-on #footer{position:fixed}
 #footer .copyright li{border-left:dotted 1px rgba(255,255,255,.5);display:inline-block;line-height:1;margin-left:.75em;padding-left:.75em}
 #footer .copyright li:first-child{border-left:0;margin-left:0;padding-left:0}
 #main{margin-left:23.58277%;padding:3.4076em 2.60947em 2.60947em}}
 @media screen and (min-width:1281px){#header{padding:6.80932em 4.21529em 4.21529em;width:38.09524%;background-size:auto,38.09524% auto;background-position:left top}
 .fixedheader-on #header{background-size:center auto}
-#footer{width:38.09524%;padding:0 4.21529em 4.21529em .80769em}
+#footer{width:38.09524%;padding:4.21529em;padding-left:.80769em}
 #main{margin-left:38.09524%;padding:6.00163em 4.21529em 4.21529em;max-width:60em}}
+nav{margin:1.61538em 0}
+nav ol,nav ul{list-style:none;margin:0;padding:0;max-width:20em;border-bottom:dotted 1px #666}
+nav li{margin:0;padding:0;border-top:dotted 1px #666}
+nav a{display:block;margin:0;padding:.40385em .80769em;border:none;white-space:nowrap;overflow:hidden}
+nav a:active,nav a:focus,nav a:hover{background-color:#115c77;color:#fff}
+#header>nav{margin-top:1.61538em}
+#header>nav ol,#header>nav ul{margin:0 auto;border-color:rgba(255,255,255,.5)}
+#header>nav li{border-color:rgba(255,255,255,.5)}
+#header>nav a:active,#header>nav a:focus,#header>nav a:hover{background-color:rgba(255,255,255,.5);color:#082d3b}
+@media screen and (min-width:981px){#header>nav ol,#header>nav ul{display:inline-block;min-width:61.90476%}}
+@media screen and (min-width:1801px){#header>nav{font-size:1em}}
 form{margin:0 0 1.61538em}
 label{color:#222;display:block;font-size:.9em;font-weight:700;margin:0 0 .80769em}
 input[type=text],input[type=password],input[type=email],select,textarea{-moz-appearance:none;-webkit-appearance:none;-o-appearance:none;-ms-appearance:none;appearance:none;background:#f6f6f6;border-radius:3px;border:2px solid transparent;color:inherit;display:block;outline:0;padding:0 .75em;text-decoration:none;width:100%}

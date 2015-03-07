@@ -15,6 +15,15 @@
 		strong, b {
 			color: $color-accent2-fg-bold;
 		}
+		
+		a {
+		    color: $color-accent2-fg;
+		    
+		    &:focus, &:hover, &:active
+		    {
+		        color: $color-accent2-fg-bold;
+		    }
+		}
 	
 		& > * {
 			color: $color-accent2-fg;
@@ -53,7 +62,7 @@
 
 	    padding: $size-element-margin;
 	    text-align: center;
-	    color: $color-accent2-fg;
+	    color: $color-accent2-fg-light;
 	    background-attachment:	scroll;
 	    background-color:		$color-accent2-bg;
 	    background-image:		url('images/overlay.png'),		url($header-bg);
@@ -63,14 +72,9 @@
 
 	    .icons {
 		    margin: ($size-element-margin * 0.5) 0 0 0;
-		
-		    a {
-			    color: $color-accent2-fg-light;
-		    }
 	    }
 		
 	    .copyright {
-		    color: $color-accent2-fg-light;
 		    font-size: $fontsize-narrowed;
 		    list-style: none;
 		    margin: ($size-element-margin * 0.5) 0 0 0;
@@ -81,12 +85,17 @@
 			    display: block;
 			    margin-left: 0;
 			    padding-left: 0;
-
-			    a {
-				    color: inherit;
-			    }
 		    }
 	    }
+
+		a {
+		    color: $color-accent2-fg-light;
+		    
+		    &:focus, &:hover, &:active
+		    {
+		        color: $color-accent2-fg-bold;
+		    }
+		}
     }
 
 
@@ -176,7 +185,7 @@
 		    left: 0;
 		    width: (100% - 100% / $calcratio) / $calcratio;
 		    padding: $size-element-margin * $calcratio;
-		    padding-top: 0;
+		    padding-top: $size-element-margin;
 		    padding-left: $size-element-margin * 0.5;
 		    text-align: right;
 		
@@ -234,7 +243,6 @@
 	    #footer {
 		    width: 100% - 100% / $calcratio;
 		    padding: $size-element-margin * $calcratio * $calcratio;
-		    padding-top: 0;
 		    padding-left: $size-element-margin * 0.5;
 	    }
 

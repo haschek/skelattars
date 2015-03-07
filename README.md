@@ -43,6 +43,7 @@ Changelog (and differences to Strata by HTML5 Up)
     * adjust colors and images
     * simplify branding configuration
     * set header only fixed if there is enough vertical space
+    * layout for navigation list
 
 Forked from: Strata by HTML5 UP
 --------------------------------------------------------------------------------

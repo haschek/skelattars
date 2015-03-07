@@ -32,17 +32,17 @@ input, select, textarea {
   font-size: 1em; }
 
 a {
-  -moz-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  -webkit-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  -o-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  -ms-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+  -moz-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+  -webkit-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+  -o-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+  -ms-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   border-bottom: dotted 1px;
   color: #115c77;
   text-decoration: none; }
   a:hover {
     border-bottom-color: transparent;
-    color: #115c77 !important;
+    color: #115c77;
     text-decoration: none; }
 
 strong, b {
@@ -291,7 +291,7 @@ ul {
     padding-left: 0; }
     ul.alt li {
       border-top: solid 2px #eeeeee;
-      padding: 0.5em 0; }
+      padding: 0.40385em 0; }
       ul.alt li:first-child {
         border-top: 0;
         padding-top: 0; }
@@ -387,6 +387,10 @@ dl {
   background-size: auto, cover; }
   #header strong, #header b {
     color: white; }
+  #header a {
+    color: rgba(255, 255, 255, 0.75); }
+    #header a:focus, #header a:hover, #header a:active {
+      color: white; }
   #header > * {
     color: rgba(255, 255, 255, 0.75);
     font-size: 1.25em;
@@ -410,7 +414,7 @@ dl {
 #footer {
   padding: 1.61538em;
   text-align: center;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.5);
   background-attachment: scroll;
   background-color: #082d3b;
   background-image: url('images/overlay.png'), url('../images/bg.png');
@@ -419,10 +423,7 @@ dl {
   background-size: auto, cover; }
   #footer .icons {
     margin: 0.80769em 0 0 0; }
-    #footer .icons a {
-      color: rgba(255, 255, 255, 0.5); }
   #footer .copyright {
-    color: rgba(255, 255, 255, 0.5);
     font-size: 0.8em;
     list-style: none;
     margin: 0.80769em 0 0 0;
@@ -431,8 +432,10 @@ dl {
       display: block;
       margin-left: 0;
       padding-left: 0; }
-      #footer .copyright li a {
-        color: inherit; }
+  #footer a {
+    color: rgba(255, 255, 255, 0.5); }
+    #footer a:focus, #footer a:hover, #footer a:active {
+      color: white; }
 
 /* Main */
 #main {
@@ -500,7 +503,7 @@ dl {
     left: 0;
     width: 23.58277%;
     padding: 2.60947em;
-    padding-top: 0;
+    padding-top: 1.61538em;
     padding-left: 0.80769em;
     text-align: right; }
     .fixedheader-on #footer {
@@ -535,13 +538,55 @@ dl {
   #footer {
     width: 38.09524%;
     padding: 4.21529em;
-    padding-top: 0;
     padding-left: 0.80769em; }
   #main {
     margin-left: 38.09524%;
     padding: 4.21529em;
     padding-top: 6.00163em;
     max-width: 60em; } }
+
+/* Navigation */
+nav {
+  margin: 1.61538em 0; }
+  nav ol, nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 20em;
+    border-bottom: dotted 1px #666666; }
+  nav li {
+    margin: 0;
+    padding: 0;
+    border-top: dotted 1px #666666; }
+  nav a {
+    display: block;
+    margin: 0;
+    padding: 0.40385em 0.80769em;
+    border: none;
+    white-space: nowrap;
+    overflow: hidden; }
+    nav a:focus, nav a:hover, nav a:active {
+      background-color: #115c77;
+      color: #fff; }
+  #header > nav {
+    margin-top: 1.61538em; }
+    #header > nav ol, #header > nav ul {
+      margin: 0 auto;
+      border-color: rgba(255, 255, 255, 0.5); }
+    #header > nav li {
+      border-color: rgba(255, 255, 255, 0.5); }
+    #header > nav a:focus, #header > nav a:hover, #header > nav a:active {
+      background-color: rgba(255, 255, 255, 0.5);
+      color: #082d3b; }
+
+@media screen and (min-width: 981px) {
+  #header > nav ol, #header > nav ul {
+    display: inline-block;
+    min-width: 61.90476%; } }
+
+@media screen and (min-width: 1801px) {
+  #header > nav {
+    font-size: 1em; } }
 
 /* Form */
 form {

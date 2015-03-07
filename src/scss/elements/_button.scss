@@ -16,7 +16,7 @@
 		height: 3.15em;
 		height: calc(2.75em + 6px);
 		line-height: 2.75em;
-		min-width: 10em;
+		min-width: $size-element-margin * 4 * $calcratio;
 		padding: 0 1.5em;
 		text-align: center;
 		text-decoration: none;
@@ -34,10 +34,12 @@
 		}
 
 		&.icon {
-			padding-left: 1.35em;
+			padding-left: $size-element-margin / 2;
+			padding-right: $size-element-margin / 2 - $size-element-margin / 4;
+			min-width: 0;
 			
 			&:before {
-				margin-right: 0.5em;
+				margin-right: $size-element-margin / 4;
 			}
 		}
 
@@ -105,11 +107,14 @@
 			    > * {
 				    margin: 0;
 				    width: 100%;
-				
+				    
 				    &.icon {
+				        min-width: $size-element-margin * 4 * $calcratio;
+				    /*
 					    &:before {
 						    margin-left: -2em;
 					    }
+				    */
 				    }
 			    }
 		    }

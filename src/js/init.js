@@ -12,7 +12,10 @@
             parallax: true,
 
         // Parallax factor (lower = more intense, higher = less intense).
-            parallaxFactor: 20
+            parallaxFactor: 20,
+        
+        // Flyin Navigation
+            flyinnav: true
 
     };
 
@@ -270,17 +273,73 @@
 
             }
 
+        // Flyin Navigation
+        
+            if (settings.flyinnav) {
+                
+                $body.addClass('flyinnav-on');
+                
+                $('nav').each(
+                    function() {
+                        var nav = $(this);
+                        
+                        if (!nav.hasClass('flyinnav-off')) {
+                        
+                            nav.addClass('flyinnav-on');
+                            
+                            var close = $('<button class="button icon fa-close"><span class="label">Close</span></button>');
+                            var open = $('<button class="button icon fa-bars flyinnav-open"><span class="label">Menu</span></button>');
+                            var links = nav.find('a');
+                            
+                            open.on(
+                                'click',
+                                function() {
+                                    nav.addClass('flyinnav-active');
+                                }
+                            );
+
+                            close.on(
+                                'click',
+                                function() {
+                                    nav.removeClass('flyinnav-active');
+                                }
+                            );
+                            
+                            links.on(
+                                'click',
+                                function() {
+                                    nav.removeClass('flyinnav-active');
+                                }
+                            );
+                            
+                            nav.append(close);
+                            nav.before(open);
+                        }
+                    }
+                );
+            }
+
         // Header.
 
             // Fixed Header
             
-                var headeritem = $('#header > *:last-child');
+                var headeritem;
+                if (!$body.hasClass('flyinnav-on')) {
+                    headeritem = $('#header > *:last-child');
+                    console.log('flyoff');
+                    console.log(headeritem);
+                }
+                else {
+                    headeritem = $('#header > *').not('nav').last();
+                    console.log('flyon');
+                    console.log(headeritem);
+                }
                 var footer = $('#footer');
                 
                 $window.on('resize', function() {
                     var vert_min = headeritem.position().top + headeritem.outerHeight();
                     var vert_max = $(window).height() - footer.outerHeight();
-
+                    //console.log(vert_min + ' < ' + vert_max);
                     if (vert_min < vert_max) {
                         $body.addClass('fixedheader-on');
                     }

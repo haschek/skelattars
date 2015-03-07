@@ -396,6 +396,8 @@ dl {
     font-size: 1.25em;
     line-height: 1.61538;
     margin: 0; }
+  #header > .button {
+    font-size: 1em; }
   #header .avatar {
     font-size: 1em;
     width: 6.80932em;
@@ -579,12 +581,87 @@ nav {
     #header > nav a:focus, #header > nav a:hover, #header > nav a:active {
       background-color: rgba(255, 255, 255, 0.5);
       color: #082d3b; }
+  .flyinnav-on nav {
+    position: fixed !important;
+    z-index: 1000;
+    top: 0 !important;
+    right: 100%;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: auto;
+    -moz-transition: right 0.25s ease-in-out;
+    -webkit-transition: right 0.25s ease-in-out;
+    -o-transition: right 0.25s ease-in-out;
+    -ms-transition: right 0.25s ease-in-out;
+    transition: right 0.25s ease-in-out;
+    background-color: rgba(8, 45, 59, 0.95) !important;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 !important;
+    padding: 1.61538em !important;
+    padding-top: 4.84615em !important;
+    font-size: 1.25em !important; }
+    .flyinnav-on nav.flyinnav-active {
+      right: 0 !important; }
+    .flyinnav-on nav ol, .flyinnav-on nav ul, .flyinnav-on nav li {
+      border-color: inherit !important; }
+    .flyinnav-on nav ol, .flyinnav-on nav ul {
+      display: block !important;
+      text-align: center !important;
+      margin: 0 auto !important;
+      min-width: 0 !important;
+      width: auto !important;
+      max-width: 20em !important; }
+    .flyinnav-on nav a {
+      color: inherit !important; }
+      .flyinnav-on nav a:focus, .flyinnav-on nav a:hover, .flyinnav-on nav a:active {
+        background-color: rgba(255, 255, 255, 0.5) !important;
+        color: #082d3b !important; }
+    .flyinnav-on nav .button {
+      color: inherit !important;
+      background-color: transparent !important;
+      border-color: inherit; }
+      .flyinnav-on nav .button:focus, .flyinnav-on nav .button:hover, .flyinnav-on nav .button:active {
+        color: #082d3b !important;
+        background-color: white !important;
+        border-color: white !important; }
+    .flyinnav-on nav > .button {
+      position: absolute;
+      top: 1.61538em;
+      right: 1.61538em; }
+
+#header .flyinnav-open {
+  margin-top: 1.61538em; }
 
 @media screen and (min-width: 981px) {
   #header > nav ol, #header > nav ul {
     display: inline-block;
     min-width: 61.90476%;
-    max-width: 100%; } }
+    max-width: 100%; }
+  .flyinnav-on nav {
+    width: 23.58277% !important; }
+    .flyinnav-on nav.flyinnav-active {
+      right: 76.41723% !important; } }
+
+@media screen and (max-width: 981px) {
+  #header .flyinnav-open {
+    position: fixed;
+    z-index: 999;
+    top: 1.61538em;
+    right: 1.61538em;
+    margin: 0;
+    color: white !important;
+    background-color: #082d3b !important;
+    border-color: rgba(255, 255, 255, 0.5); }
+    #header .flyinnav-open:focus, #header .flyinnav-open:hover, #header .flyinnav-open:active {
+      color: #082d3b !important;
+      background-color: white !important;
+      border-color: #082d3b !important; } }
+
+@media screen and (min-width: 1281px) {
+  .flyinnav-on nav {
+    width: 38.09524% !important; }
+    .flyinnav-on nav.flyinnav-active {
+      right: 61.90476% !important; } }
 
 @media screen and (min-width: 1801px) {
   #header > nav {
@@ -792,7 +869,7 @@ input[type="submit"], input[type="reset"], input[type="button"], .button {
   height: 3.15em;
   height: calc(2.75em + 6px);
   line-height: 2.75em;
-  min-width: 10em;
+  min-width: 10.43787em;
   padding: 0 1.5em;
   text-align: center;
   text-decoration: none;
@@ -805,9 +882,11 @@ input[type="submit"], input[type="reset"], input[type="button"], .button {
     border-color: #115c77;
     color: #115c77; }
   input[type="submit"].icon, input[type="reset"].icon, input[type="button"].icon, .button.icon {
-    padding-left: 1.35em; }
+    padding-left: 0.80769em;
+    padding-right: 0.40385em;
+    min-width: 0; }
     input[type="submit"].icon:before, input[type="reset"].icon:before, input[type="button"].icon:before, .button.icon:before {
-      margin-right: 0.5em; }
+      margin-right: 0.40385em; }
   input[type="submit"].fit, input[type="reset"].fit, input[type="button"].fit, .button.fit {
     display: block;
     margin: 0 0 0.80769em 0;
@@ -850,8 +929,13 @@ ul.actions, ol.actions {
     ul.actions li > *, ul.actions.vertical li > *, ol.actions li > *, ol.actions.vertical li > * {
       margin: 0;
       width: 100%; }
-      ul.actions li > *.icon:before, ul.actions.vertical li > *.icon:before, ol.actions li > *.icon:before, ol.actions.vertical li > *.icon:before {
-        margin-left: -2em; }
+      ul.actions li > *.icon, ul.actions.vertical li > *.icon, ol.actions li > *.icon, ol.actions.vertical li > *.icon {
+        min-width: 10.43787em;
+        /*
+					    &:before {
+						    margin-left: -2em;
+					    }
+				    */ }
   ul.actions.vertical li, ol.actions.vertical li {
     margin-right: 0; }
   ul.actions.small li, ol.actions.small li {

@@ -32,6 +32,10 @@
 			margin: 0;
 		}
 		
+		& > .button {
+		    font-size: 1em;
+		}
+		
 		.avatar {
 			font-size: 1em;
 			width: $size-element-margin * $calcratio * $calcratio * $calcratio;

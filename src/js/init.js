@@ -335,9 +335,9 @@
 
             // Lightbox gallery.
                 $('#two').poptrox({
-                    caption: function($a) { return $a.next('h3').text(); },
-                    overlayColor: '#2c2c2c',
-                    overlayOpacity: 0.85,
+                    caption: function($a) { return $a.siblings('.caption').text() || $a.next().text(); },
+                    // overlayColor: '#2c2c2c',
+                    // overlayOpacity: 0.85,
                     popupCloserText: '',
                     popupLoaderText: '',
                     selector: '.work-item a',
@@ -345,7 +345,7 @@
                     usePopupDefaultStyling: false,
                     usePopupEasyClose: false,
                     usePopupNav: true,
-                    windowMargin: (skel.isActive('small') ? 0 : 50)
+                    windowMargin: (!skel.isActive('medium') ? 0 : 50)
                 });
 
     });

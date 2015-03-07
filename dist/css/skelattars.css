@@ -564,7 +564,8 @@ nav {
     padding: 0.40385em 0.80769em;
     border: none;
     white-space: nowrap;
-    overflow: hidden; }
+    overflow: hidden;
+    text-overflow: ellipsis; }
     nav a:focus, nav a:hover, nav a:active {
       background-color: #115c77;
       color: #fff; }
@@ -582,7 +583,8 @@ nav {
 @media screen and (min-width: 981px) {
   #header > nav ol, #header > nav ul {
     display: inline-block;
-    min-width: 61.90476%; } }
+    min-width: 61.90476%;
+    max-width: 100%; } }
 
 @media screen and (min-width: 1801px) {
   #header > nav {

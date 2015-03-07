@@ -25,6 +25,7 @@
             
             white-space: nowrap;
             overflow: hidden;
+            text-overflow: ellipsis;
             
             &:focus, &:hover, &:active {
                 background-color: $color-link;
@@ -62,6 +63,7 @@
             ol, ul {
                 display: inline-block;
                 min-width: 100%/$calcratio;
+                max-width: 100%;
             }
         }
     }

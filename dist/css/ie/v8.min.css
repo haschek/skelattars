@@ -1,8 +1,6 @@
-.button,input[type=submit],input[type=reset],input[type=button],input[type=text],input[type=password],input[type=email],select,textarea{position:relative;-ms-behavior:url(css/ie/PIE.htc)}
+.button,.image,.image img,input[type=submit],input[type=reset],input[type=button],input[type=text],input[type=password],input[type=email],select,textarea{position:relative;-ms-behavior:url(css/ie/PIE.htc)}
 input[type=text],input[type=password],input[type=email],select{height:2.60947em;line-height:2.60947em}
 input[type=checkbox]+label:before,input[type=radio]+label:before{display:none}
-.image{position:relative;-ms-behavior:url(css/ie/PIE.htc)}
 .image:after,.image:before{display:none!important}
-.image img{position:relative;-ms-behavior:url(css/ie/PIE.htc)}
 #header{background-image:url(../../images/bg.jpg);background-repeat:no-repeat;background-size:cover;-ms-behavior:url(css/ie/backgroundsize.min.htc)}
 #footer .icons a,#header h1{color:#fff}

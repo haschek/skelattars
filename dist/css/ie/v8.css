@@ -4,38 +4,49 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 /* Button */
-input[type="submit"], input[type="reset"], input[type="button"], .button {
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button {
   position: relative;
-  -ms-behavior: url('css/ie/PIE.htc'); }
+  -ms-behavior: url("css/ie/PIE.htc"); }
 
 /* Form */
-input[type="text"], input[type="password"], input[type="email"], select, textarea {
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
   position: relative;
-  -ms-behavior: url('css/ie/PIE.htc'); }
+  -ms-behavior: url("css/ie/PIE.htc"); }
 
-input[type="text"], input[type="password"], input[type="email"], select {
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
   height: 2.60947em;
   line-height: 2.60947em; }
 
-input[type="checkbox"] + label:before, input[type="radio"] + label:before {
+input[type="checkbox"] + label:before,
+input[type="radio"] + label:before {
   display: none; }
 
 /* Image */
 .image {
   position: relative;
-  -ms-behavior: url('css/ie/PIE.htc'); }
+  -ms-behavior: url("css/ie/PIE.htc"); }
   .image:before, .image:after {
     display: none !important; }
   .image img {
     position: relative;
-    -ms-behavior: url('css/ie/PIE.htc'); }
+    -ms-behavior: url("css/ie/PIE.htc"); }
 
 /* Header */
 #header {
-  background-image: url('../../images/bg.jpg');
+  background-image: url("../../images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  -ms-behavior: url('css/ie/backgroundsize.min.htc'); }
+  -ms-behavior: url("css/ie/backgroundsize.min.htc"); }
   #header h1 {
     color: white; }
 

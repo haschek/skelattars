@@ -4,8 +4,10 @@
 	input[type="reset"],
 	input[type="button"],
 	.button {
-		@include vendor-property('appearance', 'none');
-		@include vendor-property('transition', 'background-color #{$duration-transition} ease-in-out, color #{$duration-transition} ease-in-out, border-color #{$duration-transition} ease-in-out');
+		appearance: none;
+		transition: background-color $duration-transition ease-in-out,
+		            color $duration-transition ease-in-out,
+		            border-color $duration-transition ease-in-out;
 		background-color: transparent;
 		border-radius: $size-border-radius;
 		border: solid 3px $color-border;

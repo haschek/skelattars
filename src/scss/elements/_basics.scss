@@ -9,8 +9,8 @@
 
 		&.is-loading {
 			*, *:before, *:after {
-				@include vendor-property('animation', 'none !important');
-				@include vendor-property('transition', 'none !important');
+				animation: none !important;
+				transition: none !important;
 			}
 		}
 	}
@@ -28,7 +28,9 @@
 	}
 
 	a {
-		@include vendor-property('transition', 'color #{$duration-transition} ease-in-out, background-color #{$duration-transition} ease-in-out, border-color #{$duration-transition} ease-in-out');
+		transition: color $duration-transition ease-in-out,
+		            background-color $duration-transition ease-in-out,
+		            border-color $duration-transition ease-in-out;
 		border-bottom: dotted 1px;
 		color: $color-accent-bg;
 		text-decoration: none;
@@ -258,7 +260,7 @@
 		position: relative;
 		
 		&:before {
-			@include vendor-property('transition', 'opacity #{$duration-transition} ease-in-out');
+			transition: opacity $duration-transition ease-in-out;
 			background: url('images/overlay.png');
 			border-radius: $size-border-radius;
 			content: '';
@@ -275,7 +277,7 @@
 			text-align: center;
 			
 			&:after {
-				@include vendor-property('transition', 'opacity #{$duration-transition} ease-in-out');
+				transition: opacity $duration-transition ease-in-out;
 				border-radius: $size-border-radius;
 				border: solid 3px rgba(255,255,255,0.5);
 				color: #fff;

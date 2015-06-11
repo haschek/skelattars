@@ -10,15 +10,9 @@ html {
 body {
   background: #fff; }
   body.is-loading *, body.is-loading *:before, body.is-loading *:after {
-    -moz-animation: none !important;
     -webkit-animation: none !important;
-    -o-animation: none !important;
-    -ms-animation: none !important;
     animation: none !important;
-    -moz-transition: none !important;
     -webkit-transition: none !important;
-    -o-transition: none !important;
-    -ms-transition: none !important;
     transition: none !important; }
 
 body, input, select, textarea {
@@ -32,10 +26,7 @@ input, select, textarea {
   font-size: 1em; }
 
 a {
-  -moz-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   -webkit-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  -o-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  -ms-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   border-bottom: dotted 1px;
   color: #115c77;
@@ -215,10 +206,7 @@ header.major h2 {
   display: inline-block;
   position: relative; }
   .image:before, .avatar:before {
-    -moz-transition: opacity 0.25s ease-in-out;
     -webkit-transition: opacity 0.25s ease-in-out;
-    -o-transition: opacity 0.25s ease-in-out;
-    -ms-transition: opacity 0.25s ease-in-out;
     transition: opacity 0.25s ease-in-out;
     background: url("images/overlay.png");
     border-radius: 3px;
@@ -233,10 +221,7 @@ header.major h2 {
   .image.thumb, .avatar.thumb {
     text-align: center; }
     .image.thumb:after, .avatar.thumb:after {
-      -moz-transition: opacity 0.25s ease-in-out;
       -webkit-transition: opacity 0.25s ease-in-out;
-      -o-transition: opacity 0.25s ease-in-out;
-      -ms-transition: opacity 0.25s ease-in-out;
       transition: opacity 0.25s ease-in-out;
       border-radius: 3px;
       border: solid 3px rgba(255, 255, 255, 0.5);
@@ -603,10 +588,7 @@ nav {
     width: 100% !important;
     height: 100% !important;
     overflow: auto;
-    -moz-transition: right 0.25s ease-in-out;
     -webkit-transition: right 0.25s ease-in-out;
-    -o-transition: right 0.25s ease-in-out;
-    -ms-transition: right 0.25s ease-in-out;
     transition: right 0.25s ease-in-out;
     background-color: rgba(8, 45, 59, 0.95) !important;
     color: rgba(255, 255, 255, 0.5);
@@ -697,10 +679,8 @@ input[type="password"],
 input[type="email"],
 select,
 textarea {
-  -moz-appearance: none;
   -webkit-appearance: none;
-  -o-appearance: none;
-  -ms-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   background: #f6f6f6;
   border-radius: 3px;
@@ -716,6 +696,7 @@ textarea {
   input[type="email"]:invalid,
   select:invalid,
   textarea:invalid {
+    -webkit-box-shadow: none;
     box-shadow: none; }
   input[type="text"]:focus,
   input[type="password"]:focus,
@@ -761,10 +742,8 @@ textarea {
 
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-appearance: none;
   -webkit-appearance: none;
-  -o-appearance: none;
-  -ms-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   display: block;
   float: left;
@@ -821,23 +800,27 @@ input[type="checkbox"] + label:before {
 input[type="radio"] + label:before {
   border-radius: 100%; }
 
+.formerize-placeholder,
 ::-webkit-input-placeholder {
+  text-overflow: ellipsis;
   color: #666666 !important;
   opacity: 1.0; }
 
-:-moz-placeholder {
-  color: #666666 !important;
-  opacity: 1.0; }
-
+.formerize-placeholder,
 ::-moz-placeholder {
+  text-overflow: ellipsis;
   color: #666666 !important;
   opacity: 1.0; }
 
+.formerize-placeholder,
 :-ms-input-placeholder {
+  text-overflow: ellipsis;
   color: #666666 !important;
   opacity: 1.0; }
 
-.formerize-placeholder {
+.formerize-placeholder,
+::placeholder {
+  text-overflow: ellipsis;
   color: #666666 !important;
   opacity: 1.0; }
 
@@ -887,15 +870,10 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 .button {
-  -moz-appearance: none;
   -webkit-appearance: none;
-  -o-appearance: none;
-  -ms-appearance: none;
+  -moz-appearance: none;
   appearance: none;
-  -moz-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   -webkit-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  -o-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  -ms-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   background-color: transparent;
   border-radius: 3px;
@@ -1054,31 +1032,34 @@ ul.actions, ol.actions {
     width: 100%; } }
 
 /* Poptrox */
-/*
-	// TODO: problems with (nodejs) sass compiler
-	@include vendor-keyframes('spin') {
-		0% { @include vendor-property('transform', 'rotate(0deg)'); }
-		100% { @include vendor-property('transform', 'rotate(360deg)'); }
-	};
-	*/
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
 .poptrox-popup {
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
-  -o-box-sizing: content-box;
-  -ms-box-sizing: content-box;
   box-sizing: content-box;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   background: #fff;
   border-radius: 0;
+  -webkit-box-shadow: 0 0.1em 0.15em 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 0.1em 0.15em 0 rgba(0, 0, 0, 0.15);
   overflow: hidden;
   padding-bottom: 3em; }
   .poptrox-popup .loader {
     text-decoration: none;
-    -moz-animation: spin 1s linear infinite;
     -webkit-animation: spin 1s linear infinite;
-    -o-animation: spin 1s linear infinite;
-    -ms-animation: spin 1s linear infinite;
     animation: spin 1s linear infinite;
     font-size: 1.5em;
     height: 1em;
@@ -1112,10 +1093,7 @@ ul.actions, ol.actions {
   .poptrox-popup .nav-next,
   .poptrox-popup .nav-previous {
     text-decoration: none;
-    -moz-transition: opacity 0.25s ease-in-out;
     -webkit-transition: opacity 0.25s ease-in-out;
-    -o-transition: opacity 0.25s ease-in-out;
-    -ms-transition: opacity 0.25s ease-in-out;
     transition: opacity 0.25s ease-in-out;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     background: rgba(0, 0, 0, 0.01);
@@ -1157,10 +1135,7 @@ ul.actions, ol.actions {
       left: 0; }
   .poptrox-popup .closer {
     text-decoration: none;
-    -moz-transition: opacity 0.25s ease-in-out;
     -webkit-transition: opacity 0.25s ease-in-out;
-    -o-transition: opacity 0.25s ease-in-out;
-    -ms-transition: opacity 0.25s ease-in-out;
     transition: opacity 0.25s ease-in-out;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     color: #fff;
@@ -1181,10 +1156,7 @@ ul.actions, ol.actions {
       font-weight: normal;
       text-transform: none !important; }
     .poptrox-popup .closer:before {
-      -moz-box-sizing: content-box;
       -webkit-box-sizing: content-box;
-      -o-box-sizing: content-box;
-      -ms-box-sizing: content-box;
       box-sizing: content-box;
       border-radius: 100%;
       border: solid 3px rgba(255, 255, 255, 0.5);
@@ -1200,6 +1172,7 @@ ul.actions, ol.actions {
       width: 1.75em;
       color: #fff;
       text-shadow: 0 0 1px #444;
+      -webkit-box-shadow: 0 0 1px #444;
       box-shadow: 0 0 1px #444; }
   .poptrox-popup:hover .nav-next,
   .poptrox-popup:hover .nav-previous {

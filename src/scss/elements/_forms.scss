@@ -17,7 +17,7 @@
 	input[type="email"],
 	select,
 	textarea {
-		@include vendor-property('appearance', 'none');
+		appearance: none;
 		background: $color-border-bg;
 		border-radius: $size-border-radius;
 		border: solid 2px transparent;
@@ -74,7 +74,7 @@
 
 	input[type="checkbox"],
 	input[type="radio"] {
-		@include vendor-property('appearance', 'none');
+		appearance: none;
 		display: block;
 		float: left;
 		margin-right: -2em;
@@ -141,27 +141,9 @@
 		}
 	}
 
-	::-webkit-input-placeholder {
-		color: $color-fg-light !important;
-		opacity: 1.0;
-	}
-
-	:-moz-placeholder {
-		color: $color-fg-light !important;
-		opacity: 1.0;
-	}
-
-	::-moz-placeholder {
-		color: $color-fg-light !important;
-		opacity: 1.0;
-	}
-
-	:-ms-input-placeholder {  
-		color: $color-fg-light !important;
-		opacity: 1.0;
-	}
-
-	.formerize-placeholder {  
+	.formerize-placeholder,
+	::placeholder {
+	    text-overflow: ellipsis;
 		color: $color-fg-light !important;
 		opacity: 1.0;
 	}

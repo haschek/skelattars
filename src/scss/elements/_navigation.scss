@@ -63,7 +63,7 @@
             
             overflow: auto;
             
-    		@include vendor-property('transition', 'right #{$duration-transition} ease-in-out');
+    		transition: right $duration-transition ease-in-out;
 
             background-color: rgba($color-accent2-bg, 0.95) !important;
             color: $color-accent2-fg-light;

@@ -80,7 +80,7 @@ figure {
   margin: 1em 40px; }
 
 hr {
-  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -117,6 +117,7 @@ input {
   line-height: normal; }
 
 input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0; }
 
@@ -125,7 +126,6 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 
 input[type=search] {
   -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box; }
 
@@ -156,7 +156,6 @@ td, th {
 
 /* Box Model */
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
@@ -425,15 +424,9 @@ html {
 body {
   background: #fff; }
   body.is-loading *, body.is-loading *:before, body.is-loading *:after {
-    -moz-animation: none !important;
     -webkit-animation: none !important;
-    -o-animation: none !important;
-    -ms-animation: none !important;
     animation: none !important;
-    -moz-transition: none !important;
     -webkit-transition: none !important;
-    -o-transition: none !important;
-    -ms-transition: none !important;
     transition: none !important; }
 
 body, input, select, textarea {
@@ -447,10 +440,7 @@ input, select, textarea {
   font-size: 1em; }
 
 a {
-  -moz-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   -webkit-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  -o-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  -ms-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   border-bottom: dotted 1px;
   color: #115c77;
@@ -630,10 +620,7 @@ header.major h2 {
   display: inline-block;
   position: relative; }
   .image:before, .avatar:before {
-    -moz-transition: opacity 0.25s ease-in-out;
     -webkit-transition: opacity 0.25s ease-in-out;
-    -o-transition: opacity 0.25s ease-in-out;
-    -ms-transition: opacity 0.25s ease-in-out;
     transition: opacity 0.25s ease-in-out;
     background: url("images/overlay.png");
     border-radius: 3px;
@@ -648,10 +635,7 @@ header.major h2 {
   .image.thumb, .avatar.thumb {
     text-align: center; }
     .image.thumb:after, .avatar.thumb:after {
-      -moz-transition: opacity 0.25s ease-in-out;
       -webkit-transition: opacity 0.25s ease-in-out;
-      -o-transition: opacity 0.25s ease-in-out;
-      -ms-transition: opacity 0.25s ease-in-out;
       transition: opacity 0.25s ease-in-out;
       border-radius: 3px;
       border: solid 3px rgba(255, 255, 255, 0.5);
@@ -1018,10 +1002,7 @@ nav {
     width: 100% !important;
     height: 100% !important;
     overflow: auto;
-    -moz-transition: right 0.25s ease-in-out;
     -webkit-transition: right 0.25s ease-in-out;
-    -o-transition: right 0.25s ease-in-out;
-    -ms-transition: right 0.25s ease-in-out;
     transition: right 0.25s ease-in-out;
     background-color: rgba(8, 45, 59, 0.95) !important;
     color: rgba(255, 255, 255, 0.5);
@@ -1112,10 +1093,8 @@ input[type="password"],
 input[type="email"],
 select,
 textarea {
-  -moz-appearance: none;
   -webkit-appearance: none;
-  -o-appearance: none;
-  -ms-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   background: #f6f6f6;
   border-radius: 3px;
@@ -1131,6 +1110,7 @@ textarea {
   input[type="email"]:invalid,
   select:invalid,
   textarea:invalid {
+    -webkit-box-shadow: none;
     box-shadow: none; }
   input[type="text"]:focus,
   input[type="password"]:focus,
@@ -1176,10 +1156,8 @@ textarea {
 
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-appearance: none;
   -webkit-appearance: none;
-  -o-appearance: none;
-  -ms-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   display: block;
   float: left;
@@ -1236,23 +1214,27 @@ input[type="checkbox"] + label:before {
 input[type="radio"] + label:before {
   border-radius: 100%; }
 
+.formerize-placeholder,
 ::-webkit-input-placeholder {
+  text-overflow: ellipsis;
   color: #666666 !important;
   opacity: 1.0; }
 
-:-moz-placeholder {
-  color: #666666 !important;
-  opacity: 1.0; }
-
+.formerize-placeholder,
 ::-moz-placeholder {
+  text-overflow: ellipsis;
   color: #666666 !important;
   opacity: 1.0; }
 
+.formerize-placeholder,
 :-ms-input-placeholder {
+  text-overflow: ellipsis;
   color: #666666 !important;
   opacity: 1.0; }
 
-.formerize-placeholder {
+.formerize-placeholder,
+::placeholder {
+  text-overflow: ellipsis;
   color: #666666 !important;
   opacity: 1.0; }
 
@@ -1302,15 +1284,10 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 .button {
-  -moz-appearance: none;
   -webkit-appearance: none;
-  -o-appearance: none;
-  -ms-appearance: none;
+  -moz-appearance: none;
   appearance: none;
-  -moz-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   -webkit-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  -o-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out;
-  -ms-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   background-color: transparent;
   border-radius: 3px;

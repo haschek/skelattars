@@ -12,6 +12,13 @@ exports.scss = {
     errLogToConsole: true
 };
 
+// Autoprefixer
+exports.autoprefixer = {
+    browsers: ['> 1%', 'last 3 versions', 'last 3 BlackBerry versions', 'last 3 Android versions'], // @see https://github.com/ai/browserslist
+    cascade: false,
+    remove: true
+};
+
 // CSS Minifier (clean-css)
 
 exports.minifycss = {
